@@ -1,2 +1,2 @@
 # kriptoclub-ai
-Tenične analize različnih parov
+Tenične analize različnih valutnih parov
