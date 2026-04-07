@@ -14,7 +14,17 @@ app.get("/analyze", async (req, res) => {
     // 1. BINANCE PODATKI
     // =========================
     const url = `https://api.binance.com/api/v3/klines?symbol=${pair}&interval=1h&limit=100`;
-    const candles = await fetch(url).then(r => r.json());
+    const response = await fetch(url);
+const candles = await response.json();
+
+console.log("Binance response:", candles);
+
+if (!Array.isArray(candles)) {
+  return res.json({
+    error: "Napaka pri Binance API",
+    details: candles
+  });
+}
 
     const closes = candles.map(c => parseFloat(c[4]));
 
