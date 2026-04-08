@@ -8,39 +8,43 @@ const app = express();
 app.get("/analyze", async (req, res) => {
   try {
     const pairInput = req.query.pair || "BTC/USDT";
-    const pair = pairInput.replace("/", "").toUpperCase();
 
     // =========================
     // 1. COINGECKO PODATKI
     // =========================
-    const cgPair = pair.replace("USDT", "usd").toLowerCase().replace("btc", "bitcoin");
 
-const url = `https://api.coingecko.com/api/v3/coins/${cgPair}/market_chart?vs_currency=usd&days=1`;
+    // podpora za osnovne coine
+    const map = {
+      BTC: "bitcoin",
+      ETH: "ethereum",
+      SOL: "solana",
+      XRP: "ripple",
+      ADA: "cardano",
+      DOGE: "dogecoin"
+    };
 
-const response = await fetch(url);
-const data = await response.json();
+    const base = pairInput.split("/")[0].toUpperCase();
+    const coinId = map[base];
 
-if (!data.prices) {
-  return res.json({
-    error: "Napaka pri CoinGecko API",
-    details: data
-  });
-}
+    if (!coinId) {
+      return res.json({
+        error: "Nepodprt par (zaenkrat): " + pairInput
+      });
+    }
 
-// CoinGecko format → [timestamp, price]
-const closes = data.prices.map(p => p[1]);
+    const url = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1`;
 
-const price = closes[closes.length - 1];
+    const response = await fetch(url);
+    const data = await response.json();
 
-console.log("Binance response:", candles);
+    if (!data.prices) {
+      return res.json({
+        error: "Napaka pri CoinGecko API",
+        details: data
+      });
+    }
 
-if (!Array.isArray(candles)) {
-  return res.json({
-    error: "Napaka pri Binance API",
-    details: candles
-  });
-}
-
+    const closes = data.prices.map(p => p[1]);
     const price = closes[closes.length - 1];
 
     // =========================
@@ -77,7 +81,7 @@ if (!Array.isArray(candles)) {
 
     const ema20 = calculateEMA(closes, 20).toFixed(0);
     const ema50 = calculateEMA(closes, 50).toFixed(0);
-    const ema200 = calculateEMA(closes, 100).toFixed(0); // approx
+    const ema200 = calculateEMA(closes, 100).toFixed(0);
 
     // =========================
     // 4. MARKET STRUCTURE
