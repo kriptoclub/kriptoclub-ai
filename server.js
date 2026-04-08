@@ -11,11 +11,26 @@ app.get("/analyze", async (req, res) => {
     const pair = pairInput.replace("/", "").toUpperCase();
 
     // =========================
-    // 1. BINANCE PODATKI
+    // 1. COINGECKO PODATKI
     // =========================
-    const url = `https://api.binance.com/api/v3/klines?symbol=${pair}&interval=1h&limit=100`;
-    const response = await fetch(url);
-const candles = await response.json();
+    const cgPair = pair.replace("USDT", "usd").toLowerCase().replace("btc", "bitcoin");
+
+const url = `https://api.coingecko.com/api/v3/coins/${cgPair}/market_chart?vs_currency=usd&days=1`;
+
+const response = await fetch(url);
+const data = await response.json();
+
+if (!data.prices) {
+  return res.json({
+    error: "Napaka pri CoinGecko API",
+    details: data
+  });
+}
+
+// CoinGecko format → [timestamp, price]
+const closes = data.prices.map(p => p[1]);
+
+const price = closes[closes.length - 1];
 
 console.log("Binance response:", candles);
 
@@ -25,8 +40,6 @@ if (!Array.isArray(candles)) {
     details: candles
   });
 }
-
-    const closes = candles.map(c => parseFloat(c[4]));
 
     const price = closes[closes.length - 1];
 
