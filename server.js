@@ -130,9 +130,20 @@ Napiši profesionalno tehnično analizo v slovenščini:
 
     const aiData = await aiRes.json();
 
-    res.json({
-      analysis: aiData.choices[0].message.content
-    });
+console.log("OpenAI response:", aiData);
+
+// če NI pravilnega odgovora
+if (!aiData.choices || !aiData.choices[0]) {
+  return res.json({
+    error: "Napaka pri OpenAI API",
+    details: aiData
+  });
+}
+
+// če je OK
+res.json({
+  analysis: aiData.choices[0].message.content
+});
 
   } catch (err) {
     res.status(500).json({ error: err.message });
