@@ -1,4 +1,3 @@
-import cors from "cors";   
 import express from "express";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
@@ -6,8 +5,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-
-app.use(cors());  
 
 app.get("/analyze", async (req, res) => {
   try {
