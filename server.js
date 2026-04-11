@@ -11,8 +11,16 @@ app.use(cors());
 
 app.get("/analyze", async (req, res) => {
   try {
-    const pairInput = req.query.pair || "BTC/USDT";
+    let pairInput = req.query.pair || "BTC/USDT";
 
+// 🔥 NORMALIZACIJA (KLJUČNO)
+pairInput = pairInput.toUpperCase();
+
+if (!pairInput.includes("/")) {
+  if (pairInput.endsWith("USDT")) {
+    pairInput = pairInput.replace("USDT", "/USDT");
+  }
+}
     // =========================
     // 1. COINGECKO PODATKI
     // =========================
