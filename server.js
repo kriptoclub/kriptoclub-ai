@@ -47,14 +47,24 @@ if (!pairInput.includes("/")) {
     const url = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1`;
 
     const response = await fetch(url);
-    const data = await response.json();
 
-    if (!data.prices) {
-      return res.json({
-        error: "Napaka pri CoinGecko API",
-        details: data
-      });
-    }
+if (!response.ok) {
+  return res.json({
+    error: "CoinGecko HTTP napaka",
+    status: response.status
+  });
+}
+
+const data = await response.json();
+
+console.log("CoinGecko DATA:", data);
+
+    if (!data.prices || data.prices.length === 0) {
+  return res.json({
+    error: "CoinGecko ni vrnil cen",
+    details: data
+  });
+}
 
     const closes = data.prices.map(p => p[1]);
     const price = closes[closes.length - 1];
