@@ -14,7 +14,15 @@ app.get("/analyze", async (req, res) => {
     let pairInput = req.query.pair || "BTC/USDT";
 
 // 🔥 NORMALIZACIJA (KLJUČNO)
-pairInput = pairInput.toUpperCase();
+pairInput = pairInput.toUpperCase().replace("-", "/");
+
+if (!pairInput.includes("/")) {
+  if (pairInput.endsWith("USDT")) {
+    pairInput = pairInput.replace("USDT", "/USDT");
+  } else if (pairInput.endsWith("USD")) {
+    pairInput = pairInput.replace("USD", "/USD");
+  }
+}
 
 if (!pairInput.includes("/")) {
   if (pairInput.endsWith("USDT")) {
