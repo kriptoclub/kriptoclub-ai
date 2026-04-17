@@ -94,7 +94,7 @@ Trenutno se odpira prostor za nadaljevanje rasti proti ${Math.round(target1)} US
 
 Če se momentum ohrani, se lahko gibanje razširi tudi proti ${Math.round(target2)} USD ali višje.
 
-Scenarij se razveljavi v primeru padca pod ${currentFib618} USD, kar predstavlja 0.618 popravek trenutnega vala.
+Scenarij se razveljavi v primeru padca pod ${currentFib618} USD.
 `;
 }
 
