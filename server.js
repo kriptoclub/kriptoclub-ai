@@ -50,6 +50,19 @@ const target2 = waveEnd + diff * 2.618;
 const target3 = waveEnd + diff * 3.618;
 const target4 = waveEnd + diff * 4.236;
 
+    // =========================
+// 🔥 CURRENT WAVE (ZA INVALIDACIJO)
+// =========================
+
+// trenutni val = od waveEnd do currentPrice
+const currentWaveLow = waveEnd;
+const currentWaveHigh = currentPrice;
+
+// 0.618 retracement trenutnega vala
+const currentFib618 = Math.round(
+  currentWaveHigh - (currentWaveHigh - currentWaveLow) * 0.618
+);
+
 // =========================
 // 🧠 LOGIKA
 // =========================
@@ -65,7 +78,11 @@ Za potrditev zaključka korekcije bo moral trg najprej prebiti območje ${Math.r
 
 V primeru povečane moči se lahko gibanje razširi tudi proti ${Math.round(target2)} USD ali višje.
 
-Če se cena ponovno obrne navzdol in pade proti ${Math.round(waveEnd)} USD, obstaja velika verjetnost oblikovanja novega nižjega dna.
+Če se od trenutne cene pri ${Math.round(currentPrice)} USD pojavi zavrnitev in se padec nadaljuje, potem bo preboj pod ${currentFib618} USD razveljavil scenarij rasti proti ${Math.round(target1)} USD.
+
+V tem primeru obstaja povečana verjetnost oblikovanja dvojnega dna ali novega nižjega dna.
+
+Pomembno: v primeru nadaljnje rasti nad ${Math.round(currentPrice)} USD se bo tudi invalidacijski nivo (${currentFib618} USD) ustrezno premaknil.
 `;
 
 } else {
@@ -77,7 +94,7 @@ Trenutno se odpira prostor za nadaljevanje rasti proti ${Math.round(target1)} US
 
 Če se momentum ohrani, se lahko gibanje razširi tudi proti ${Math.round(target2)} USD ali višje.
 
-Scenarij se razveljavi v primeru padca nazaj proti ${Math.round(waveEnd)} USD.
+Scenarij se razveljavi v primeru padca pod ${currentFib618} USD, kar predstavlja 0.618 popravek trenutnega vala.
 `;
 }
 
