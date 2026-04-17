@@ -29,150 +29,71 @@ if (!pairInput.includes("/")) {
     pairInput = pairInput.replace("USDT", "/USDT");
   }
 }
-    // =========================
-    // 1. COINGECKO PODATKI
-    // =========================
+// =========================
+// 🔥 FIB ANALIZA (TVOJ SISTEM)
+// =========================
 
-    // podpora za osnovne coine
-    const map = {
-      BTC: "bitcoin",
-      ETH: "ethereum",
-      SOL: "solana",
-      XRP: "ripple",
-      ADA: "cardano",
-      DOGE: "dogecoin"
-    };
+const waveStart = parseFloat(req.query.wave_start);
+const waveEnd = parseFloat(req.query.wave_end);
+const currentPrice = parseFloat(req.query.current_price);
 
-    const base = pairInput.split("/")[0].toUpperCase();
-    const coinId = map[base];
-
-    if (!coinId) {
-      return res.json({
-        error: "Nepodprt par (zaenkrat): " + pairInput
-      });
-    }
-
-    const url = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1`;
-
-    const response = await fetch(url);
-
-if (!response.ok) {
-  return res.json({
-    error: "CoinGecko HTTP napaka",
-    status: response.status
-  });
+if (!waveStart || !waveEnd) {
+  return res.json({ error: "Manjkajo podatki (wave_start, wave_end)" });
 }
 
-const data = await response.json();
+const diff = waveStart - waveEnd;
 
-console.log("CoinGecko DATA:", data);
+// FIB LEVELS
+const fib0618 = waveEnd + diff * 0.618;
+const target1 = waveEnd + diff * 1.618;
+const target2 = waveEnd + diff * 2.618;
+const target3 = waveEnd + diff * 3.618;
+const target4 = waveEnd + diff * 4.236;
 
-    if (!data.prices || data.prices.length === 0) {
-  return res.json({
-    error: "CoinGecko ni vrnil cen",
-    details: data
-  });
-}
+// =========================
+// 🧠 LOGIKA
+// =========================
 
-    const closes = data.prices.map(p => p[1]);
-    const price = closes[closes.length - 1];
+let analysis = "";
 
-    // =========================
-    // 2. RSI
-    // =========================
-    function calculateRSI(data, period = 14) {
-      let gains = 0, losses = 0;
+if (currentPrice && currentPrice < fib0618) {
 
-      for (let i = data.length - period; i < data.length - 1; i++) {
-        const diff = data[i + 1] - data[i];
-        if (diff >= 0) gains += diff;
-        else losses -= diff;
-      }
+  analysis = `
+Trenutno se odvija odbojni val znotraj korekcije. Cena še ni presegla ključnega nivoja ${Math.round(fib0618)} USD, kar pomeni, da popravek še vedno traja.
 
-      const rs = gains / losses || 1;
-      return 100 - (100 / (1 + rs));
-    }
+Za potrditev zaključka korekcije bo moral trg najprej prebiti območje ${Math.round(fib0618)} USD. V tem primeru se odpre prostor za nadaljevanje gibanja proti ${Math.round(target1)} USD.
 
-    const rsi = calculateRSI(closes).toFixed(2);
+V primeru povečane moči se lahko gibanje razširi tudi proti ${Math.round(target2)} USD ali višje.
 
-    // =========================
-    // 3. EMA
-    // =========================
-    function calculateEMA(data, period) {
-      const k = 2 / (period + 1);
-      let ema = data[0];
-
-      for (let i = 1; i < data.length; i++) {
-        ema = data[i] * k + ema * (1 - k);
-      }
-
-      return ema;
-    }
-
-    const ema20 = calculateEMA(closes, 20).toFixed(0);
-    const ema50 = calculateEMA(closes, 50).toFixed(0);
-    const ema200 = calculateEMA(closes, 100).toFixed(0);
-
-    // =========================
-    // 4. MARKET STRUCTURE
-    // =========================
-    const last = closes.slice(-10);
-    const trend =
-      last[last.length - 1] > last[0] ? "higher highs" : "lower lows";
-
-    // =========================
-    // 5. PROMPT
-    // =========================
-    const prompt = `
-Analiziraj kripto par ${pairInput}.
-
-Podatki:
-Cena: ${price}
-RSI: ${rsi}
-EMA20: ${ema20}
-EMA50: ${ema50}
-EMA200: ${ema200}
-Struktura: ${trend}
-
-Napiši profesionalno tehnično analizo v slovenščini:
-- kratek povzetek
-- trend
-- ključni nivoji
-- momentum
-- scenariji
-- zaključek
+Če se cena ponovno obrne navzdol in pade proti ${Math.round(waveEnd)} USD, obstaja velika verjetnost oblikovanja novega nižjega dna.
 `;
 
-    // =========================
-    // 6. AI KLIC
-    // =========================
-    const aiRes = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${process.env.OPENAI_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: "gpt-5",
-        messages: [{ role: "user", content: prompt }]
-      })
-    });
+} else {
 
-    const aiData = await aiRes.json();
+  analysis = `
+Cena je že presegla ključni nivo ${Math.round(fib0618)} USD, kar nakazuje, da je korekcija najverjetneje zaključena.
 
-console.log("OpenAI response:", aiData);
+Trenutno se odpira prostor za nadaljevanje rasti proti ${Math.round(target1)} USD.
 
-// če NI pravilnega odgovora
-if (!aiData.choices || !aiData.choices[0]) {
-  return res.json({
-    error: "Napaka pri OpenAI API",
-    details: aiData
-  });
+Če se momentum ohrani, se lahko gibanje razširi tudi proti ${Math.round(target2)} USD ali višje.
+
+Scenarij se razveljavi v primeru padca nazaj proti ${Math.round(waveEnd)} USD.
+`;
 }
 
-// če je OK
+// =========================
+// 📤 OUTPUT
+// =========================
+
 res.json({
-  analysis: aiData.choices[0].message.content
+  pair: pairInput,
+  currentPrice,
+  key_level: Math.round(fib0618),
+  target1: Math.round(target1),
+  target2: Math.round(target2),
+  target3: Math.round(target3),
+  target4: Math.round(target4),
+  analysis
 });
 
   } catch (err) {
