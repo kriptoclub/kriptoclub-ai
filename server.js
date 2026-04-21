@@ -75,8 +75,6 @@ const currentFib618 = Math.round(
 
 let analysis = "";
 
-let analysis = "";
-
 // =========================
 // 🟢 KOREKCIJA (tvoj primer 1,2,3)
 // =========================
