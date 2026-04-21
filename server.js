@@ -125,35 +125,44 @@ Scenarij se razveljavi ob padcu pod ${currentFib618} USD.
 }
 
 // =========================
-// 🔴 IMPULZ (tvoj primer 4)
+// 🟢 KOREKCIJA
 // =========================
-const diff = waveEnd - waveStart;
+if (isCorrection) {
 
-const fib0382 = waveEnd - diff * 0.382;
-const fib0618 = waveEnd - diff * 0.618;
-const fib0786 = waveEnd - diff * 0.786;
+  // (tvoj obstoječi blok pusti kot je)
 
-if (currentPrice > fib0382) {
+}
 
-  analysis = `
+// =========================
+// 🔴 IMPULZ (FIXED)
+// =========================
+else if (isImpulse) {
+
+  const diffImpulse = waveEnd - waveStart;
+
+  const fib0382 = waveEnd - diffImpulse * 0.382;
+  const fib0618 = waveEnd - diffImpulse * 0.618;
+  const fib0786 = waveEnd - diffImpulse * 0.786;
+
+  if (currentPrice > fib0382) {
+
+    analysis = `
 Trenutno poteka zdrava korekcija po rasti.
 
 Dokler cena ostaja nad ${Math.round(fib0382)} USD, je struktura še vedno močna in obstaja velika verjetnost nadaljevanja rasti.
 `;
 
-} else if (currentPrice > fib0618) {
+  } else if (currentPrice > fib0618) {
 
-  analysis = `
+    analysis = `
 Trenutno smo v fazi popravka.
 
 Cena je padla pod prvo pomembnejšo točko pri ${Math.round(fib0382)} USD, kar odpira prostor za nadaljevanje korekcije proti ${Math.round(fib0618)} USD (0.618).
-
-To območje predstavlja ključno točko, kjer se lahko popravek zaključi in nadaljuje trend.
 `;
 
-} else if (currentPrice > fib0786) {
+  } else if (currentPrice > fib0786) {
 
-  analysis = `
+    analysis = `
 Cena je padla pod 0.618 nivo (${Math.round(fib0618)} USD).
 
 To je prvi resnejši signal slabitve trenda.
@@ -161,27 +170,24 @@ To je prvi resnejši signal slabitve trenda.
 Naslednja ključna obrambna točka se nahaja pri ${Math.round(fib0786)} USD (0.786).
 `;
 
-} else if (currentPrice > waveStart) {
+  } else if (currentPrice > waveStart) {
 
-  analysis = `
+    analysis = `
 Popravek je presegel tudi 0.786 nivo.
 
-To pomeni visoko verjetnost spremembe trenda.
-
-Cena se lahko premakne proti prejšnjemu dnu pri ${Math.round(waveStart)} USD, kjer obstaja možnost oblikovanja dvojnega dna.
+Cena se lahko premakne proti prejšnjemu dnu pri ${Math.round(waveStart)} USD, kjer obstaja možnost dvojnega dna.
 `;
 
-} else {
+  } else {
 
-  analysis = `
+    analysis = `
 Prejšnje dno je bilo izgubljeno.
-
-S tem se potrjuje prehod v padajoč trend.
 
 V negativnem scenariju se odpre prostor za padec proti ${Math.round(target1)} USD (1.618 Fibonacci ekstenzija).
 `;
-}
+  }
 
+}
 // =========================
 // 📤 OUTPUT
 // =========================
