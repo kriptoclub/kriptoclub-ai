@@ -127,41 +127,59 @@ Scenarij se razveljavi ob padcu pod ${currentFib618} USD.
 // =========================
 // 🔴 IMPULZ (tvoj primer 4)
 // =========================
-const fib0382_down = waveStart + (waveEnd - waveStart) * 0.382;
-const fib0618_down = waveStart + (waveEnd - waveStart) * 0.618;
+const diff = waveEnd - waveStart;
 
-if (currentPrice > fib0618_down) {
+const fib0382 = waveEnd - diff * 0.382;
+const fib0618 = waveEnd - diff * 0.618;
+const fib0786 = waveEnd - diff * 0.786;
+
+if (currentPrice > fib0382) {
 
   analysis = `
-Trenutno poteka korekcija po rasti.
+Trenutno poteka zdrava korekcija po rasti.
 
-Ključna nivoja:
-- ${Math.round(fib0382_down)} USD
-- ${Math.round(fib0618_down)} USD
+Dokler cena ostaja nad ${Math.round(fib0382)} USD, je struktura še vedno močna in obstaja velika verjetnost nadaljevanja rasti.
+`;
 
-Na teh nivojih lahko pride do zavrnitve in nadaljevanja trenda.
+} else if (currentPrice > fib0618) {
+
+  analysis = `
+Trenutno smo v fazi popravka.
+
+Cena je padla pod prvo pomembnejšo točko pri ${Math.round(fib0382)} USD, kar odpira prostor za nadaljevanje korekcije proti ${Math.round(fib0618)} USD (0.618).
+
+To območje predstavlja ključno točko, kjer se lahko popravek zaključi in nadaljuje trend.
+`;
+
+} else if (currentPrice > fib0786) {
+
+  analysis = `
+Cena je padla pod 0.618 nivo (${Math.round(fib0618)} USD).
+
+To je prvi resnejši signal slabitve trenda.
+
+Naslednja ključna obrambna točka se nahaja pri ${Math.round(fib0786)} USD (0.786).
 `;
 
 } else if (currentPrice > waveStart) {
 
   analysis = `
-Cena je padla pod 0.618 nivo (${Math.round(fib0618_down)} USD).
+Popravek je presegel tudi 0.786 nivo.
 
-S tem se povečuje verjetnost nadaljevanja padca proti območju ${Math.round(waveStart)} USD, kjer se nahaja prejšnje dno.
+To pomeni visoko verjetnost spremembe trenda.
 
-Na tem območju obstaja možnost oblikovanja dvojnega dna.
+Cena se lahko premakne proti prejšnjemu dnu pri ${Math.round(waveStart)} USD, kjer obstaja možnost oblikovanja dvojnega dna.
 `;
 
 } else {
 
   analysis = `
-Prejšnje dno pri ${Math.round(waveStart)} USD je bilo izgubljeno.
+Prejšnje dno je bilo izgubljeno.
 
-S tem se potrjuje nadaljevanje padajočega gibanja.
+S tem se potrjuje prehod v padajoč trend.
 
-Naslednji cilj se nahaja pri ${Math.round(target1)} USD (1.618 Fibonacci ekstenzija).
+V negativnem scenariju se odpre prostor za padec proti ${Math.round(target1)} USD (1.618 Fibonacci ekstenzija).
 `;
-
 }
 
 // =========================
