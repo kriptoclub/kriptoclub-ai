@@ -37,7 +37,7 @@ const waveStart = parseFloat(req.query.wave_start);
 const waveEnd = parseFloat(req.query.wave_end);
 const currentPrice = parseFloat(req.query.current_price);
 
-if (!waveStart || !waveEnd) {
+if (isNaN(waveStart) || isNaN(waveEnd))  {
   return res.json({ error: "Manjkajo podatki (wave_start, wave_end)" });
 }
 
