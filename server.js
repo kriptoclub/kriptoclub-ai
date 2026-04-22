@@ -37,6 +37,9 @@ const waveStart = parseFloat(req.query.wave_start);
 const waveEnd = parseFloat(req.query.wave_end);
 const currentPrice = parseFloat(req.query.current_price);
 
+const isUptrend = waveStart < waveEnd;
+const isDowntrend = waveStart > waveEnd;
+
 if (isNaN(waveStart) || isNaN(waveEnd))  {
   return res.json({ error: "Manjkajo podatki (wave_start, wave_end)" });
 }
@@ -126,7 +129,18 @@ To območje predstavlja ključno mejo, kjer se odloča ali se trend nadaljuje al
 Scenarij se razveljavi ob padcu pod ${Math.round(fib0618)} USD.
 `;
 
-  } else if (currentPrice > fib0786) {
+else if (currentPrice > fib0786) {
+
+  analysis = `
+Cena je padla pod 0.618 nivo (${Math.round(fib0618)} USD).
+
+To je pomemben signal slabitve trenda.
+
+Če se cena približa območju ${Math.round(waveStart)} USD, obstaja možnost oblikovanja dvojnega dna.
+
+V primeru preboja tega nivoja se poveča verjetnost padca proti ${Math.round(target1)} USD (1.618 Fibonacci).
+`;
+}
 
     analysis = `
 Cena je padla pod ključno območje, kar kaže na oslabitev trenda.
@@ -196,61 +210,7 @@ Scenarij se razveljavi ob padcu nazaj pod ${Math.round(fib0618)} USD.
 
 }
 
-// =========================
-// 🔴 IMPULZ (FIXED)
-// =========================
-else if (isImpulse) {
 
-  const diffImpulse = waveEnd - waveStart;
-
-  const fib0382 = waveEnd - diffImpulse * 0.382;
-  const fib0618 = waveEnd - diffImpulse * 0.618;
-  const fib0786 = waveEnd - diffImpulse * 0.786;
-
-  if (currentPrice > fib0382) {
-
-    analysis = `
-Trenutno poteka zdrava korekcija po rasti.
-
-Dokler cena ostaja nad ${Math.round(fib0382)} USD, je struktura še vedno močna in obstaja velika verjetnost nadaljevanja rasti.
-`;
-
-  } else if (currentPrice > fib0618) {
-
-    analysis = `
-Trenutno smo v fazi popravka.
-
-Cena je padla pod prvo pomembnejšo točko pri ${Math.round(fib0382)} USD, kar odpira prostor za nadaljevanje korekcije proti ${Math.round(fib0618)} USD (0.618).
-`;
-
-  } else if (currentPrice > fib0786) {
-
-    analysis = `
-Cena je padla pod 0.618 nivo (${Math.round(fib0618)} USD).
-
-To je prvi resnejši signal slabitve trenda.
-
-Naslednja ključna obrambna točka se nahaja pri ${Math.round(fib0786)} USD (0.786).
-`;
-
-  } else if (currentPrice > waveStart) {
-
-    analysis = `
-Popravek je presegel tudi 0.786 nivo.
-
-Cena se lahko premakne proti prejšnjemu dnu pri ${Math.round(waveStart)} USD, kjer obstaja možnost dvojnega dna.
-`;
-
-  } else {
-
-    analysis = `
-Prejšnje dno je bilo izgubljeno.
-
-V negativnem scenariju se odpre prostor za padec proti ${Math.round(target1)} USD (1.618 Fibonacci ekstenzija).
-`;
-  }
-
-}
 // =========================
 // 📤 OUTPUT
 // =========================
