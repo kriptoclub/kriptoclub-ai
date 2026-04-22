@@ -107,9 +107,9 @@ let analysis = "";
 // =========================
 if (isUptrend) {
 
-  if (currentPrice > fib0382) {
+if (currentPrice > fib0382) {
 
-    analysis = `
+  analysis = `
 Trenutno poteka zdrava korekcija po predhodni rasti.
 
 Dokler cena ostaja nad ${Math.round(fib0382)} USD, ostaja struktura trenda stabilna in obstaja verjetnost nadaljevanja rasti.
@@ -117,9 +117,9 @@ Dokler cena ostaja nad ${Math.round(fib0382)} USD, ostaja struktura trenda stabi
 Scenarij se razveljavi ob padcu pod ${Math.round(fib0618)} USD.
 `;
 
-  } else if (currentPrice > fib0618) {
+} else if (currentPrice > fib0618) {
 
-    analysis = `
+  analysis = `
 Trenutno smo v fazi popravka.
 
 Cena je že padla pod prvo pomembnejšo območje, kar odpira prostor za nadaljevanje gibanja proti ${Math.round(fib0618)} USD.
@@ -129,7 +129,7 @@ To območje predstavlja ključno mejo, kjer se odloča ali se trend nadaljuje al
 Scenarij se razveljavi ob padcu pod ${Math.round(fib0618)} USD.
 `;
 
-else if (currentPrice > fib0786) {
+} else if (currentPrice > fib0786) {
 
   analysis = `
 Cena je padla pod 0.618 nivo (${Math.round(fib0618)} USD).
@@ -140,21 +140,10 @@ To je pomemben signal slabitve trenda.
 
 V primeru preboja tega nivoja se poveča verjetnost padca proti ${Math.round(target1)} USD (1.618 Fibonacci).
 `;
-}
 
-    analysis = `
-Cena je padla pod ključno območje, kar kaže na oslabitev trenda.
+} else if (currentPrice > waveStart) {
 
-V tem trenutku se povečuje verjetnost gibanja proti območju ${Math.round(waveStart)} USD.
-
-Čeprav obstaja možnost dvojnega dna, je verjetnost nadaljevanja padca večja.
-
-Scenarij se razveljavi ob vrnitvi nad ${Math.round(fib0618)} USD.
-`;
-
-  } else if (currentPrice > waveStart) {
-
-    analysis = `
+  analysis = `
 Cena se nahaja tik nad prejšnjim dnom pri ${Math.round(waveStart)} USD.
 
 Gre za kritično območje, kjer lahko pride do kratkoročnega odboja, vendar je statistično verjetnejši nadaljnji padec.
@@ -164,16 +153,16 @@ V primeru izgube tega nivoja se odpre prostor za padec proti ${Math.round(target
 Scenarij se razveljavi ob vrnitvi nad ${Math.round(fib0786)} USD.
 `;
 
-  } else {
+} else {
 
-    analysis = `
+  analysis = `
 Prejšnje dno je bilo izgubljeno, kar potrjuje prehod v padajoč trend.
 
 S tem se odpre prostor za nadaljevanje padca proti ${Math.round(target1)} USD, z možnostjo dosega tudi ${Math.round(target2)} USD.
 
 Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
 `;
-  }
+}
 
 } else if (isDowntrend) {
 
