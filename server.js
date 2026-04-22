@@ -45,16 +45,40 @@ if (isNaN(waveStart) || isNaN(waveEnd))  {
 const diff = Math.abs(waveStart - waveEnd);
 
 // smer vala
-const isCorrection = waveStart > waveEnd; // padec → korekcija (bull trend)
-const isImpulse = waveStart < waveEnd;    // rast → impulz (zdaj korekcija)
+let fib0382, fib0618, fib0786;
+let target1, target2, target3, target4;
 
-// FIB LEVELS
-const fib0618 = waveEnd + diff * 0.618;
-const fib0382 = waveEnd + diff * 0.382;
-const target1 = waveEnd + diff * 1.618;
-const target2 = waveEnd + diff * 2.618;
-const target3 = waveEnd + diff * 3.618;
-const target4 = waveEnd + diff * 4.236;
+// 🟢 RAST → korekcija dol
+if (waveStart < waveEnd) {
+
+  const diff = waveEnd - waveStart;
+
+  fib0382 = waveEnd - diff * 0.382;
+  fib0618 = waveEnd - diff * 0.618;
+  fib0786 = waveEnd - diff * 0.786;
+
+  target1 = waveEnd - diff * 1.618;
+  target2 = waveEnd - diff * 2.618;
+  target3 = waveEnd - diff * 3.618;
+  target4 = waveEnd - diff * 4.236;
+
+}
+
+// 🔴 PADEC → odboj gor
+else {
+
+  const diff = waveStart - waveEnd;
+
+  fib0382 = waveEnd + diff * 0.382;
+  fib0618 = waveEnd + diff * 0.618;
+  fib0786 = waveEnd + diff * 0.786;
+
+  target1 = waveEnd + diff * 1.618;
+  target2 = waveEnd + diff * 2.618;
+  target3 = waveEnd + diff * 3.618;
+  target4 = waveEnd + diff * 4.236;
+
+}
 
     // =========================
 // 🔥 CURRENT WAVE (ZA INVALIDACIJO)
@@ -78,58 +102,97 @@ let analysis = "";
 // =========================
 // 🟢 KOREKCIJA (tvoj primer 1,2,3)
 // =========================
-if (isCorrection) {
+if (isUptrend) {
 
-  if (currentPrice < fib0618) {
+  if (currentPrice > fib0382) {
 
     analysis = `
-Trenutno se odvija korekcija znotraj rastočega trenda.
+Trenutno poteka zdrava korekcija po predhodni rasti.
 
-Ključna nivoja:
-- ${Math.round(fib0382)} USD
-- ${Math.round(fib0618)} USD
+Dokler cena ostaja nad ${Math.round(fib0382)} USD, ostaja struktura trenda stabilna in obstaja verjetnost nadaljevanja rasti.
 
-Na teh območjih lahko pride do reakcije trga.
-
-Preboj nad ${Math.round(fib0618)} USD bi potrdil zaključek korekcije in odprl prostor za rast proti ${Math.round(target1)} USD.
+Scenarij se razveljavi ob padcu pod ${Math.round(fib0618)} USD.
 `;
 
-  } else if (currentPrice < waveStart) {
+  } else if (currentPrice > fib0618) {
 
     analysis = `
-Cena se približuje prejšnjemu vrhu pri ${Math.round(waveStart)} USD.
+Trenutno smo v fazi popravka.
 
-Možna scenarija:
-- zavrnitev → dvojni vrh
-- preboj → začetek impulznega vala
+Cena je že padla pod prvo pomembnejšo območje, kar odpira prostor za nadaljevanje gibanja proti ${Math.round(fib0618)} USD.
 
-V primeru preboja se odpre prostor proti ${Math.round(target1)} USD.
+To območje predstavlja ključno mejo, kjer se odloča ali se trend nadaljuje ali začne slabiti.
+
+Scenarij se razveljavi ob padcu pod ${Math.round(fib0618)} USD.
+`;
+
+  } else if (currentPrice > fib0786) {
+
+    analysis = `
+Cena je padla pod ključno območje, kar kaže na oslabitev trenda.
+
+V tem trenutku se povečuje verjetnost gibanja proti območju ${Math.round(waveStart)} USD.
+
+Čeprav obstaja možnost dvojnega dna, je verjetnost nadaljevanja padca večja.
+
+Scenarij se razveljavi ob vrnitvi nad ${Math.round(fib0618)} USD.
+`;
+
+  } else if (currentPrice > waveStart) {
+
+    analysis = `
+Cena se nahaja tik nad prejšnjim dnom pri ${Math.round(waveStart)} USD.
+
+Gre za kritično območje, kjer lahko pride do kratkoročnega odboja, vendar je statistično verjetnejši nadaljnji padec.
+
+V primeru izgube tega nivoja se odpre prostor za padec proti ${Math.round(target1)} USD.
+
+Scenarij se razveljavi ob vrnitvi nad ${Math.round(fib0786)} USD.
 `;
 
   } else {
 
     analysis = `
-Prejšnji vrh pri ${Math.round(waveStart)} USD je bil presežen.
+Prejšnje dno je bilo izgubljeno, kar potrjuje prehod v padajoč trend.
 
-To pomeni začetek impulznega vala.
+S tem se odpre prostor za nadaljevanje padca proti ${Math.round(target1)} USD, z možnostjo dosega tudi ${Math.round(target2)} USD.
 
-Cilji:
-- ${Math.round(target1)} USD
-- ${Math.round(target2)} USD
-
-Scenarij se razveljavi ob padcu pod ${currentFib618} USD.
+Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
 `;
-
   }
 
-}
+} else if (isDowntrend) {
 
-// =========================
-// 🟢 KOREKCIJA
-// =========================
-if (isCorrection) {
+  if (currentPrice < fib0382) {
 
-  // (tvoj obstoječi blok pusti kot je)
+    analysis = `
+Trenutno se odvija odboj znotraj padajočega trenda.
+
+Gre za kratkoročno gibanje navzgor, ki zaenkrat ne pomeni spremembe trenda.
+
+Scenarij se razveljavi ob preboju nad ${Math.round(fib0618)} USD.
+`;
+
+  } else if (currentPrice < fib0618) {
+
+    analysis = `
+Odboj je dosegel pomembnejše območje, kjer lahko pride do zavrnitve.
+
+To je ključna cona, kjer se lahko trend nadaljuje navzdol ali pa začne prehajati v obrat.
+
+Scenarij se razveljavi ob preboju nad ${Math.round(fib0618)} USD.
+`;
+
+  } else {
+
+    analysis = `
+Cena je presegla ključno območje odboja, kar lahko nakazuje začetek spremembe trenda.
+
+V tem primeru se povečuje verjetnost nadaljevanja rasti proti ${Math.round(target1)} USD.
+
+Scenarij se razveljavi ob padcu nazaj pod ${Math.round(fib0618)} USD.
+`;
+  }
 
 }
 
