@@ -172,7 +172,7 @@ Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
 Trenutno se odvija odbojni val in od tega kako se bo ta odbojni val odvijal, bo odvisno nadaljevanje. 
 
 Obstajata dva nivoja pri katerih lahko pride do zavrnitve in na njiju je potrebno biti pozoren. Prvi nivo se nahaja v višini 
-${Math.round(fib0386)} USD in drugi nivo se nahaja v višini ${Math.round(fib0618)} USD.
+${Math.round(fib0382)} USD in drugi nivo se nahaja v višini ${Math.round(fib0618)} USD.
 
 Preboj prvega nivoja odpira vrata dvigu do drugega nivoja, kot rečeno pa je na njiju potrebno biti pozoren, saj predstavljata tudi morebitno zavrnitveno točko.
 Najbolj ključen od obeh nivojev je drugi nivo pri ${Math.round(fib0618)} USD. in če se dogodi preboj tega nivoja lahko sledi dvig do predhodnega vrha,
