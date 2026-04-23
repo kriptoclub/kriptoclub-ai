@@ -175,9 +175,9 @@ ${Math.round(fib0382)} USD in drugi nivo se nahaja v višini ${Math.round(fib061
 
 Preboj prvega nivoja odpira prostor za nadaljevanje rasti proti drugemu nivoju, vendar oba predstavljata potencialno točko zavrnitve.
 Ključnejši med njima je drugi nivo pri ${Math.round(fib0618)} USD. 
-V primeru njegovega preboja se odpre prostor za rast proti predhodnemu vrhu v višini ${Math.round(waveStart)} USD, pri čemer je potrebno spremljati še nivo
+V primeru njegovega preboja se odpre prostor za rast proti predhodnemu vrhu, pri čemer je potrebno spremljati še nivo
  ${Math.round(fib0786)} USD. 
-Nad tem nivojem se poveča verjetnost dosega predhodnega vrha. Če je ta vrh presežen, se lahko začne razvijati nov impulzni val s prvo tarčo rasti pri ${Math.round(target1)} USD (1.618 Fibonacci).  
+Nad tem nivojem se poveča verjetnost dviga do predhodnega vrha pri ${Math.round(waveStart)} USD. Če je ta vrh presežen, se lahko začne razvijati nov impulzni val s prvo tarčo rasti pri ${Math.round(target1)} USD.  
 
 `;
 
