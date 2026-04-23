@@ -169,14 +169,15 @@ Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
   if (currentPrice < fib0382) {
 
     analysis = `
-Trenutno se odvija odbojni val in od tega kako se bo ta odbojni val odvijal, bo odvisno nadaljevanje. 
-
-Obstajata dva nivoja pri katerih lahko pride do zavrnitve in na njiju je potrebno biti pozoren. Prvi nivo se nahaja v višini 
+Trenutno se odvija odbojni val, od katerega bo odvisno nadaljnje gibanje cene.
+Obstajata dva ključna nivoja, kjer lahko pride do zavrnitve, zato je na njiju potrebno biti posebej pozoren. Prvi nivo se nahaja v višini 
 ${Math.round(fib0382)} USD in drugi nivo se nahaja v višini ${Math.round(fib0618)} USD.
 
-Preboj prvega nivoja odpira vrata dvigu do drugega nivoja, kot rečeno pa je na njiju potrebno biti pozoren, saj predstavljata tudi morebitno zavrnitveno točko.
-Najbolj ključen od obeh nivojev je drugi nivo pri ${Math.round(fib0618)} USD. in če se dogodi preboj tega nivoja lahko sledi dvig do predhodnega vrha,
-pri čemer bo potrebno paziti še na nivo ${Math.round(fib0786)} USD. Nad tem nivojem je torej možen dvig do predhodnega vrha in v kolikor pa ta vrh presežen, se bo pričel razvijati naslednji impulzivni val.  
+Preboj prvega nivoja odpira prostor za nadaljevanje rasti proti drugemu nivoju, vendar oba predstavljata potencialno točko zavrnitve.
+Ključnejši med njima je drugi nivo pri ${Math.round(fib0618)} USD. 
+V primeru njegovega preboja se odpre prostor za rast proti predhodnemu vrhu, pri čemer je potrebno spremljati še nivo
+ ${Math.round(fib0786)} USD. 
+Nad tem nivojem se poveča verjetnost dosega predhodnega vrha. Če je ta vrh presežen, se lahko začne razvijati nov impulzni val s prvo tarčo rasti pri ${Math.round(fib1618)} USD.  
 
 `;
 
