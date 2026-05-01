@@ -194,9 +194,7 @@ Preboj tega nivoja bi potrdil scenarij nadaljevanja rasti, kot je opisan zgoraj.
 
 Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod nivo:
 
-{
-  "invalidacija": "wave_end - (wave_range * 0.618)"
-}
+
 
 , se scenarij rasti razveljavi.
 `;
