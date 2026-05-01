@@ -91,10 +91,8 @@ else {
 const currentWaveLow = waveEnd;
 const currentWaveHigh = currentPrice;
 
-// 0.618 retracement trenutnega vala
-const currentFib618 = Math.round(
-  currentWaveHigh - (currentWaveHigh - currentWaveLow) * 0.618
-);
+const invalidationLevel =
+currentWaveHigh - (currentWaveHigh - currentWaveLow) * 0.618;;
 
 // =========================
 // 🧠 LOGIKA
