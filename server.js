@@ -191,6 +191,8 @@ Gre za izjemno občutljivo območje, kjer lahko pride do zavrnitve, zato je potr
 
 Preden bi cena dosegla predhodni vrh, je pomembno spremljati še nivo pri ${Math.round(fib0786)} USD.
 Preboj tega nivoja bi potrdil scenarij nadaljevanja rasti, kot je opisan zgoraj.
+
+Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod ${Math.round(invalidationLevel)} USD se scenarij rasti razveljavi.
 `;
 
   } else {
