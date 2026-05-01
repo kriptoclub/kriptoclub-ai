@@ -184,11 +184,21 @@ Nad tem nivojem se poveča verjetnost dviga do predhodnega vrha pri ${Math.round
   } else if (currentPrice < fib0618) {
 
     analysis = `
-Odboj je dosegel pomembnejše območje, kjer lahko pride do zavrnitve.
+Odbojni val se nadaljuje, vendar se približujemo ključni točki, kjer bomo lahko začeli govoriti o začetku novega impulzivnega vala. Ta bi lahko najprej pripeljal do ponovnega testa predhodnega vrha (wave start), v primeru preboja pa bi sledil nadaljnji dvig proti ${Math.round(fib1.618)} USD.
 
-To je ključna cona, kjer se lahko trend nadaljuje navzdol ali pa začne prehajati v obrat.
+👉 Glavni nivo, ki ga je potrebno spremljati, se nahaja pri ${Math.round(fib0618)} USD.
+Gre za izjemno občutljivo območje, kjer lahko pride do zavrnitve, zato je potrebna povečana previdnost.
 
-Scenarij se razveljavi ob preboju nad ${Math.round(fib0618)} USD.
+Preden bi cena dosegla predhodni vrh, je pomembno spremljati še nivo pri ${Math.round(fib0786)} USD.
+Preboj tega nivoja bi potrdil scenarij nadaljevanja rasti, kot je opisan zgoraj.
+
+Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod nivo:
+
+{
+  "invalidacija": "wave_end - (wave_range * 0.618)"
+}
+
+, se scenarij rasti razveljavi.
 `;
 
   } else {
