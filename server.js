@@ -200,7 +200,7 @@ Val, v katerem se nahaja ${pairInput}, se nadaljuje in postaja vse bolj zanimivo
 
 V primeru uspešnega preboja se odpre prostor za dvig do predhodnega vrha pri ${Math.round(waveStart)} USD. Če bo tudi ta nivo presežen, lahko pričakujemo nadaljevanje rasti proti prvi pomembnejši prodajni tarči pri ${Math.round(target1)} USD. (ostale bodo sledile če bo ta tarča presežena)
 
-Pomembno je spremljati razvoj gibanja nivo za nivojem, saj vsak izmed njih poleg potenciala za nadaljevanje rasti predstavlja tudi možno točko zavrnitve. Ob dosegu posameznih nivojev je smiselno analizirati situacijo na nižjih časovnih okvirih, kjer se pokaže, ali se scenarij dodatnega dviga potrjuje ali zavrača.
+Pomembno je spremljati razvoj gibanja nivo za nivojem, saj vsak izmed njih poleg potenciala za nadaljevanje rasti predstavlja tudi možno točko zavrnitve. Ob dosegu posameznih nivojev je smiselno analizirati situacijo na krajših časovnih intervalih, kjer se najprej pokaže, ali se scenarij dodatnega nadaljevanja trenutnega trenda  potrjuje ali zavrača.
 
 Ko bodo ti nivoji pri ${Math.round(fib0786)} USD, ${Math.round(waveStart)} USD in pri ${Math.round(target1)} USD doseženi, bova ponovno pregledala sliko na krajših intervalih in preverila bova kaj se glede dodatne rasti mora dogoditi in kaj se ne sme dogoditi. 
 
