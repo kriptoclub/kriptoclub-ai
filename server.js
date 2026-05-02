@@ -196,11 +196,15 @@ Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod 
   } else {
 
     analysis = `
-Cena je presegla ključno območje odboja, kar lahko nakazuje začetek spremembe trenda.
+Val, v katerem se nahaja ${pairInput}, se nadaljuje in postaja vse bolj zanimivo. Do potrditve nadaljevanja rasti manjka le še odločen preboj nivoja ${Math.round(fib0786)} USD.
 
-V tem primeru se povečuje verjetnost nadaljevanja rasti proti ${Math.round(target1)} USD.
+V primeru uspešnega preboja se odpre prostor za dvig do predhodnega vrha pri ${Math.round(waveStart)} USD. Če bo tudi ta nivo presežen, lahko pričakujemo nadaljevanje rasti proti prvi pomembnejši prodajni tarči pri ${Math.round(target1)} USD. (ostale bodo sledile če bo ta tarča presežena)
 
-Scenarij se razveljavi ob padcu nazaj pod ${Math.round(fib0618)} USD.
+Pomembno je spremljati razvoj gibanja nivo za nivojem, saj vsak izmed njih poleg potenciala za nadaljevanje rasti predstavlja tudi možno točko zavrnitve. Ob dosegu posameznih nivojev je smiselno analizirati situacijo na nižjih časovnih okvirih, kjer se pokaže, ali se scenarij dodatnega dviga potrjuje ali zavrača.
+
+Ko bodo ti nivoji pri ${Math.round(fib0786)} USD, ${Math.round(waveStart)} USD in pri ${Math.round(target1)} USD doseženi, bova ponovno pregledala sliko na krajših intervalih in preverila bova kaj se glede dodatne rasti mora dogoditi in kaj se ne sme dogoditi. 
+
+Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod ${Math.round(invalidationLevel)} USD se scenarij rasti razveljavi.
 `;
   }
 
