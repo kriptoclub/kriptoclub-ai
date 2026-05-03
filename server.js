@@ -193,7 +193,7 @@ Preboj tega nivoja bi potrdil scenarij nadaljevanja rasti, kot je opisan zgoraj.
 Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod ${Math.round(invalidationLevel)} USD se scenarij rasti razveljavi.
 `;
 
-  } else {
+ } else if (currentPrice < fib0786) {
 
     analysis = `
 Val, v katerem se nahaja ${pairInput}, se nadaljuje in postaja vse bolj zanimivo. Do potrditve nadaljevanja rasti manjka le še odločen preboj nivoja ${Math.round(fib0786)} USD.
