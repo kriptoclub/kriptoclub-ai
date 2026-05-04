@@ -224,7 +224,16 @@ Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod 
  } else if (currentPrice < fib1382) {
 
     analysis = `
-    cena je med  prejšnjim vrhom in 1.618
+    Preboj je potrjen in trg kaže moč.
+
+Odpre se možnost nadaljevanja rasti proti ${Math.round(target1)} USD, vendar je ključno spremljati dogajanje pri nivoju ${Math.round(fib1382)} USD.
+Preboj tega nivoja odpira vrata nadaljnjemu dvigu proti omenjeni tarči.
+
+Kar se invalidacije tiče:
+Pozornost se sedaj premakne na nivo ${Math.round(waveStart)} USD.
+Padec pod ta nivo ni zaželen, saj lahko ogrozi scenarij rasti.
+
+Na nižjih časovnih okvirih bodi posebej pozoren na strukturo dna – prvo nižje dno je lahko zgodnji opozorilni signal.
 `;
     
   }
