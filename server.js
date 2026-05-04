@@ -206,6 +206,10 @@ Ko bodo ti nivoji pri ${Math.round(fib0786)} USD, ${Math.round(waveStart)} USD i
 
 Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod ${Math.round(invalidationLevel)} USD se scenarij rasti razveljavi.
 `;
+} else if (currentPrice < waveStart) {
+    cena je tik pod prejšnjim vrhom
+
+ `;
   }
 
 }
