@@ -211,7 +211,7 @@ Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod 
     analysis = `
     cena je tik pod prejšnjim vrhom
 `;
- } else if (currentPrice < target1) {
+ } else if (currentPrice < fib1382) {
 
     analysis = `
     cena je med  prejšnjim vrhom in 1.618
