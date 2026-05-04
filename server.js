@@ -233,7 +233,57 @@ Kar se invalidacije tiče:
 Pozornost se sedaj premakne na nivo ${Math.round(waveStart)} USD.
 Padec pod ta nivo ni zaželen, saj lahko ogrozi scenarij rasti.
 
-Na nižjih časovnih okvirih bodi posebej pozoren na strukturo dna – prvo nižje dno je lahko zgodnji opozorilni signal.
+Na nižjih časovnih intervalih  bodi posebej pozoren na strukturo dna – prvo nižje dno je lahko zgodnji opozorilni signal.
+`;
+
+} else if (currentPrice < target1) {
+
+    analysis = `
+    Gibanje se razvija zelo konstruktivno in pot do ${Math.round(target1)} USD je odprta.
+
+Če bo ta nivo presežen, se ponovno oglasi, da izračunava naslednje tarče.
+
+Scenarij rasti ostaja veljaven, dokler cena ostaja nad ${Math.round(waveStart)} USD.
+`;
+
+} else if (currentPrice < target2) {
+
+    analysis = `
+    Val postaja izrazito impulziven.
+
+Obstaja možnost nadaljevanja rasti proti ${Math.round(target2)} USD.
+Bodi pozoren na nivo ${Math.round(target1)} USD, saj lahko padec pod ta nivo nakaže prve znake slabitve.
+
+Invalidacija scenarija ostaja vezana na nivo ${Math.round(waveStart)} USD.
+`;
+
+} else if (currentPrice < target3) {
+
+    analysis = `
+    Takšna dinamika v enem valu je redka, vendar jo trg trenutno potrjuje.
+
+Naslednja tarča se nahaja pri ${Math.round(target3)} USD.
+
+Na tej točki spremljaj:
+
+nižje časovne intervale
+pojav prvega nižjega dna (zgodnji opozorilni signal)
+
+Glavna podpora se trenutno nahaja pri ${Math.round(target2)} USD.
+`;
+
+} else if (currentPrice < target4) {
+
+    analysis = `
+    Približujemo se izjemno občutljivemu območju pri ${Math.round(target4)} USD.
+
+Statistično gledano večina valut na tem nivoju doživi zavrnitev, saj gre za zelo močan impulzni val.
+Če pa pride do preboja, se odpre prostor za bistveno višje tarče – vendar na to ni priporočljivo računati vnaprej.
+
+Glavna podpora:
+
+${Math.round(target3)} USD
+ob izgubi → možen padec proti ${Math.round(target2)} USD
 `;
     
   }
