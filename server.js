@@ -48,8 +48,8 @@ if (isNaN(waveStart) || isNaN(waveEnd))  {
 const diff = Math.abs(waveStart - waveEnd);
 
 // smer vala
-let fib0382, fib0618, fib0786;
-let target1, target2, target3, target4;
+let fib0382, fib0618, fib0786, fib1382;
+let target1, target2, target3, target4, target5, target6, target7, target8, target9;
 
 // 🟢 RAST → korekcija dol
 if (waveStart < waveEnd) {
@@ -59,11 +59,17 @@ if (waveStart < waveEnd) {
   fib0382 = waveEnd - diff * 0.382;
   fib0618 = waveEnd - diff * 0.618;
   fib0786 = waveEnd - diff * 0.786;
+  fib0382 = waveEnd - diff * 1.236;
 
   target1 = waveEnd - diff * 1.618;
   target2 = waveEnd - diff * 2.618;
   target3 = waveEnd - diff * 3.618;
   target4 = waveEnd - diff * 4.236;
+  target5 = waveEnd - diff * 6.854;
+  target6 = waveEnd - diff * 11.09;
+  target7 = waveEnd - diff * 17.944;
+  target8 = waveEnd - diff * 29.029;
+  target9 = waveEnd - diff * 46.121;
 
 }
 
@@ -80,6 +86,11 @@ else {
   target2 = waveEnd + diff * 2.618;
   target3 = waveEnd + diff * 3.618;
   target4 = waveEnd + diff * 4.236;
+  target5 = waveEnd - diff * 6.854;
+  target6 = waveEnd - diff * 11.09;
+  target7 = waveEnd - diff * 17.944;
+  target8 = waveEnd - diff * 29.029;
+  target9 = waveEnd - diff * 46.121;
 
 }
 
