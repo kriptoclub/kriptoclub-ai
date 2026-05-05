@@ -233,12 +233,12 @@ Pred tem pa je potrebno spremljati še nivo ${Math.round(fib1382)} USD, ki preds
 
 Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod ${Math.round(invalidationLevel)} USD se scenarij rasti razveljavi.
 `;
- } else if (currentPrice < fib1236) {
+ } else if (currentPrice > waveStart) {
 
     analysis = `
 Preboj je potrjen in trg kaže moč.
 
-Odpre se možnost nadaljevanja rasti proti ${Math.round(target1)} USD, vendar je ključno spremljati dogajanje pri nivoju ${Math.round(fib1382)} USD.
+Odpre se možnost nadaljevanja rasti proti ${Math.round(target1)} USD, vendar je ključno spremljati dogajanje pri nivoju ${Math.round(fib1236)} USD.
 Preboj tega nivoja odpira vrata nadaljnjemu dvigu proti omenjeni tarči.
 
 Kar se invalidacije tiče:
