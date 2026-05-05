@@ -48,7 +48,7 @@ if (isNaN(waveStart) || isNaN(waveEnd))  {
 const diff = Math.abs(waveStart - waveEnd);
 
 // smer vala
-let fib0382, fib0618, fib0786, fib1382;
+let fib0382, fib0618, fib0786, fib1236;
 let target1, target2, target3, target4, target5, target6, target7, target8, target9;
 
 // 🟢 RAST → korekcija dol
@@ -232,10 +232,10 @@ Pred tem pa je potrebno spremljati še nivo ${Math.round(fib1382)} USD, ki preds
 
 Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod ${Math.round(invalidationLevel)} USD se scenarij rasti razveljavi.
 `;
- } else if (currentPrice < fib1382) {
+ } else if (currentPrice < fib1236) {
 
     analysis = `
-    Preboj je potrjen in trg kaže moč.
+Preboj je potrjen in trg kaže moč.
 
 Odpre se možnost nadaljevanja rasti proti ${Math.round(target1)} USD, vendar je ključno spremljati dogajanje pri nivoju ${Math.round(fib1382)} USD.
 Preboj tega nivoja odpira vrata nadaljnjemu dvigu proti omenjeni tarči.
@@ -250,7 +250,7 @@ Na nižjih časovnih intervalih  bodi posebej pozoren na strukturo dna – prvo 
 } else if (currentPrice < target1) {
 
     analysis = `
-    Gibanje se razvija zelo konstruktivno in pot do ${Math.round(target1)} USD je odprta.
+Gibanje se razvija zelo konstruktivno in pot do ${Math.round(target1)} USD je odprta.
 
 Če bo ta nivo presežen, se ponovno oglasi, da izračunava naslednje tarče.
 
