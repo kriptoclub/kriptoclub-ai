@@ -65,11 +65,7 @@ if (waveStart < waveEnd) {
   target2 = waveEnd - diff * 2.618;
   target3 = waveEnd - diff * 3.618;
   target4 = waveEnd - diff * 4.236;
-  target5 = waveEnd - diff * 6.854;
-  target6 = waveEnd - diff * 11.09;
-  target7 = waveEnd - diff * 17.944;
-  target8 = waveEnd - diff * 29.029;
-  target9 = waveEnd - diff * 46.121;
+  
 
 }
 
@@ -87,11 +83,7 @@ else {
   target2 = waveEnd + diff * 2.618;
   target3 = waveEnd + diff * 3.618;
   target4 = waveEnd + diff * 4.236;
-  target5 = waveEnd + diff * 6.854;
-  target6 = waveEnd + diff * 11.09;
-  target7 = waveEnd + diff * 17.944;
-  target8 = waveEnd + diff * 29.029;
-  target9 = waveEnd + diff * 46.121;
+  
 
 }
 
