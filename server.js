@@ -297,6 +297,65 @@ Glavna podpora:
 ${Math.round(target3)} USD
 ob izgubi → možen padec proti ${Math.round(target2)} USD
 `;
+} else if (currentPrice < target5) {
+
+    analysis = `
+To je že izjemno močan in redek scenarij.
+
+Naslednja tarča se nahaja pri ${Math.round(target5)} USD, vendar bodi previden – takšna gibanja se pogosto hitro obrnejo.
+
+Kar gre hitro gor, gre lahko hitro tudi dol. 
+`;
+} else if (currentPrice < target6) {
+
+    analysis = `
+Val je izjemno impulziven.
+
+Naslednja tarča: ${Math.round(target6)} USD
+
+Ne dovoli, da te rast zaslepi – spremljaj nižje intervale in bodi pozoren na prvo nižje dno na krajših intervalih. Če se pojavi, ustrezno ukrepaj.  
+`;
+} else if (currentPrice < target7) {
+
+    analysis = `
+To je redek primer izjemno močnega trenda.
+
+Naslednja tarča: ${Math.round(target7)} USD
+
+Ponovno: pozornost na strukturo grafa in prvo nižje dno na nižjih intervalih bo prvo opozorilo, da se lahko trend obrne v obratno smer. 
+`;
+} else if (currentPrice < target8) {
+
+    analysis = `
+Takšna rast se pojavi zelo redko.
+
+Naslednja tarča: ${Math.round(target8)} USD
+
+Če bo ta nivo presežen, se oglasi za nadaljnjo analizo. 
+`;
+} else if (currentPrice < target9) {
+
+    analysis = `
+Če sva prišla do sem – čestitke.
+
+Gre za ekstremno redek scenarij, kjer večina valut doseže svoj maksimum.
+Naslednja tarča se nahaja pri ${Math.round(target9)} USD.
+
+Če pride do preboja:
+
+možno nadaljevanje
+vendar zelo nestabilno
+
+Ključni signal:
+Padec nazaj pod ${Math.round(target8)} USD lahko pomeni začetek močnejšega popravka. 
+
+ZAKLJUČEK
+
+Če spremljaš ta val, bodi izjemno pozoren na dogajanje na nižjih časovnih okvirih.
+
+Zelo smiselno je analizirati tudi manjše valove znotraj tega gibanja.
+Če želiš, lahko skupaj pogledava strukturo na nižjih intervalih in poskusiva ujeti vrh.
+`;
     
   }
 
