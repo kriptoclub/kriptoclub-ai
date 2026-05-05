@@ -59,7 +59,7 @@ if (waveStart < waveEnd) {
   fib0382 = waveEnd - diff * 0.382;
   fib0618 = waveEnd - diff * 0.618;
   fib0786 = waveEnd - diff * 0.786;
-  fib1236 = waveEnd + diff * 1.236;
+  fib1236 = waveEnd - diff * 1.236;
 
   target1 = waveEnd - diff * 1.618;
   target2 = waveEnd - diff * 2.618;
