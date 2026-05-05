@@ -229,7 +229,7 @@ Vzorec je potrjen šele s padcem pod ${Math.round(waveEnd)} USD.
 
 2. Scenarij – preboj navzgor
 Če bo nivo ${Math.round(waveStart)} USD odločno presežen, se lahko začne razvijati nov impulzivni val. Prva pomembna tarča se nahaja pri ${Math.round(target1)} USD.
-Pred tem pa je potrebno spremljati še nivo ${Math.round(fib1382)} USD, ki predstavlja zadnjo pomembno oviro pred nadaljevanjem rasti.
+Pred tem pa je potrebno spremljati še nivo ${Math.round(fib1236)} USD, ki predstavlja zadnjo pomembno oviro pred nadaljevanjem rasti.
 
 Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod ${Math.round(invalidationLevel)} USD se scenarij rasti razveljavi.
 `;
