@@ -30,7 +30,7 @@ if (!pairInput.includes("/")) {
   }
 }
 // =========================
-//  HIBRIDNA FIB ANALIZA
+//  HIBRIDNA FIB ANALIZA (LOG + LINEAR)
 // =========================
 
 const waveStart = parseFloat(req.query.wave_start);
@@ -41,13 +41,17 @@ if (isNaN(waveStart) || isNaN(waveEnd)) {
   return res.json({ error: "Manjkajo podatki (wave_start, wave_end)" });
 }
 
-// Inicializacija spremenljivk
+// DEFINICIJA TRENDOV (Da se izogneš napaki "isUptrend is not defined")
+const isUptrend = waveStart < waveEnd;
+const isDowntrend = waveStart > waveEnd;
+
+// Inicializacija spremenljivk za nivoje
 let fib0382, fib0618, fib0786, fib1236;
 let target1, target2, target3, target4, target5, target6, target7, target8, target9;
 
-// 1. PRIMER: Rastoči trend (Logaritemski pogled)
-// Kot si napisal: waveStart je zgoraj (višja cena), waveEnd je spodaj (nižja cena)
-if (waveStart > waveEnd) {
+// 1. PRIMER: RASTOČI TREND (Logaritemski pogled)
+// Kot uporabljaš ti: waveStart je zgoraj, waveEnd je spodaj
+if (isDowntrend) { 
     
     // Pomožna funkcija za logaritemski izračun
     const calcLog = (s, e, level) => {
@@ -72,8 +76,8 @@ if (waveStart > waveEnd) {
     target9 = calcLog(waveStart, waveEnd, 46.121);
 } 
 
-// 2. PRIMER: Padajoči trend (Navadni/Linearni pogled)
-// Kot si napisal: waveStart je na dnu (nižja), waveEnd je na vrhu (višja)
+// 2. PRIMER: PADAJOČI TREND (Navadni/Linearni pogled)
+// Kot uporabljaš ti: waveStart je spodaj, waveEnd je zgoraj
 else {
     
     const diff = waveEnd - waveStart;
@@ -95,7 +99,7 @@ else {
 }
 
 // =========================
-//  CURRENT WAVE (ZA INVALIDACIJO)
+//  KONEC ANALIZE
 // =========================
 
 // trenutni val = od waveEnd do currentPrice
