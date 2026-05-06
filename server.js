@@ -30,7 +30,7 @@ if (!pairInput.includes("/")) {
   }
 }
 // =========================
-//  HIBRIDNA FIB ANALIZA (LOG + LINEAR)
+//  FIB ANALIZA (LOGARITEMSKA SKALA)
 // =========================
 
 const waveStart = parseFloat(req.query.wave_start);
@@ -41,65 +41,38 @@ if (isNaN(waveStart) || isNaN(waveEnd)) {
   return res.json({ error: "Manjkajo podatki (wave_start, wave_end)" });
 }
 
-// DEFINICIJA TRENDOV (Da se izogneš napaki "isUptrend is not defined")
+// Pomožna funkcija za logaritemski izračun Fibonacci nivojev
+// TradingView formula: exp(ln(end) - (ln(end) - ln(start)) * level)
+const calcLogFib = (start, end, level) => {
+  const logStart = Math.log(start);
+  const logEnd = Math.log(end);
+  return Math.exp(logEnd - (logEnd - logStart) * level);
+};
+
+// Definiramo nivoje in cilje
+// Ker uporabljamo logaritemsko razmerje med start in end, 
+// se smer (uptrend/downtrend) v formuli upošteva samodejno.
+const fib0382 = calcLogFib(waveStart, waveEnd, 0.382);
+const fib0618 = calcLogFib(waveStart, waveEnd, 0.618);
+const fib0786 = calcLogFib(waveStart, waveEnd, 0.786);
+const fib1236 = calcLogFib(waveStart, waveEnd, 1.236);
+
+const target1 = calcLogFib(waveStart, waveEnd, 1.618);
+const target2 = calcLogFib(waveStart, waveEnd, 2.618);
+const target3 = calcLogFib(waveStart, waveEnd, 3.618);
+const target4 = calcLogFib(waveStart, waveEnd, 4.236);
+const target5 = calcLogFib(waveStart, waveEnd, 6.854);
+const target6 = calcLogFib(waveStart, waveEnd, 11.09);
+const target7 = calcLogFib(waveStart, waveEnd, 17.944);
+const target8 = calcLogFib(waveStart, waveEnd, 29.029);
+const target9 = calcLogFib(waveStart, waveEnd, 46.121);
+
+// Pomožne spremenljivke za smer (če jih potrebuješ v nadaljevanju kode)
 const isUptrend = waveStart < waveEnd;
 const isDowntrend = waveStart > waveEnd;
 
-// Inicializacija spremenljivk za nivoje
-let fib0382, fib0618, fib0786, fib1236;
-let target1, target2, target3, target4, target5, target6, target7, target8, target9;
-
-// 1. PRIMER: RASTOČI TREND (Logaritemski pogled)
-// Kot uporabljaš ti: waveStart je zgoraj, waveEnd je spodaj
-if (isDowntrend) { 
-    
-    // Pomožna funkcija za logaritemski izračun
-    const calcLog = (s, e, level) => {
-        const logS = Math.log(s);
-        const logE = Math.log(e);
-        return Math.exp(logE - (logE - logS) * level);
-    };
-
-    fib0382 = calcLog(waveStart, waveEnd, 0.382);
-    fib0618 = calcLog(waveStart, waveEnd, 0.618);
-    fib0786 = calcLog(waveStart, waveEnd, 0.786);
-    fib1236 = calcLog(waveStart, waveEnd, 1.236);
-
-    target1 = calcLog(waveStart, waveEnd, 1.618);
-    target2 = calcLog(waveStart, waveEnd, 2.618);
-    target3 = calcLog(waveStart, waveEnd, 3.618);
-    target4 = calcLog(waveStart, waveEnd, 4.236);
-    target5 = calcLog(waveStart, waveEnd, 6.854);
-    target6 = calcLog(waveStart, waveEnd, 11.09);
-    target7 = calcLog(waveStart, waveEnd, 17.944);
-    target8 = calcLog(waveStart, waveEnd, 29.029);
-    target9 = calcLog(waveStart, waveEnd, 46.121);
-} 
-
-// 2. PRIMER: PADAJOČI TREND (Navadni/Linearni pogled)
-// Kot uporabljaš ti: waveStart je spodaj, waveEnd je zgoraj
-else {
-    
-    const diff = waveEnd - waveStart;
-
-    fib0382 = waveEnd + diff * 0.382;
-    fib0618 = waveEnd + diff * 0.618;
-    fib0786 = waveEnd + diff * 0.786;
-    fib1236 = waveEnd + diff * 1.236;
-
-    target1 = waveEnd + diff * 1.618;
-    target2 = waveEnd + diff * 2.618;
-    target3 = waveEnd + diff * 3.618;
-    target4 = waveEnd + diff * 4.236;
-    target5 = waveEnd + diff * 6.854;
-    target6 = waveEnd + diff * 11.09;
-    target7 = waveEnd + diff * 17.944;
-    target8 = waveEnd + diff * 29.029;
-    target9 = waveEnd + diff * 46.121;
-}
-
 // =========================
-//  KONEC ANALIZE
+//  CURRENT WAVE (ZA INVALIDACIJO)
 // =========================
 
 // trenutni val = od waveEnd do currentPrice
