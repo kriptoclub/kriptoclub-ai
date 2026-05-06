@@ -29,7 +29,7 @@ if (!pairInput.includes("/")) {
     pairInput = pairInput.replace("USDT", "/USDT");
   }
 }
-/ =========================
+//=========================
 // 🔥 FIB ANALIZA (TVOJ SISTEM)
 // =========================
 
