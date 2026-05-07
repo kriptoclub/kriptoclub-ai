@@ -148,6 +148,15 @@ S tem se odpre prostor za nadaljevanje padca proti ${Math.round(target1)} USD, z
 
 Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
 `;
+  } else {
+
+  analysis = `
+Prejšnje dno je bilo izgubljeno, kar potrjuje prehod v padajoč trend.
+
+padec do tarče 2  ${Math.round(target2)} USD, z možnostjo dosega tudi tarče 3  ${Math.round(target3)} USD. in tarče 4 ${Math.round(target4)}
+
+Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
+`;
 }
 
 } else if (isDowntrend) {
