@@ -139,7 +139,7 @@ V primeru izgube tega nivoja se odpre prostor za padec proti ${Math.round(target
 Scenarij se razveljavi ob vrnitvi nad ${Math.round(fib0786)} USD.
 `;
 
-} else {
+} else if (currentPrice > target1) {
 
   analysis = `
 Prejšnje dno je bilo izgubljeno, kar potrjuje prehod v padajoč trend.
@@ -148,7 +148,7 @@ S tem se odpre prostor za nadaljevanje padca proti ${Math.round(target1)} USD, z
 
 Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
 `;
-  } else {
+} else if (currentPrice > target2) {
 
   analysis = `
 Prejšnje dno je bilo izgubljeno, kar potrjuje prehod v padajoč trend.
