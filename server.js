@@ -252,126 +252,152 @@ Kot vedno pa moramo upoštevati tudi alternativni scenarij. V primeru padca pod 
 `;
  } else if (currentPrice < fib1236) {
 
-    analysis = `
-Preboj je potrjen in trg kaže moč.
+  analysis = `
+Preboj ključnega nivoja je potrjen, kar kaže na prisotnost moči kupcev in nadaljevanje pozitivnega momentuma.
 
-Odpre se možnost nadaljevanja rasti proti ${Math.round(target1)} USD, vendar je ključno spremljati dogajanje pri nivoju ${Math.round(fib1236)} USD.
-Preboj tega nivoja odpira vrata nadaljnjemu dvigu proti omenjeni tarči.
+Trg trenutno ohranja konstruktivno strukturo, pri čemer se odpira prostor za nadaljnjo rast proti ${Math.round(target1)} USD. Kljub temu ostaja nivo ${Math.round(fib1236)} USD pomembna referenčna točka – uspešno zadrževanje nad njim dodatno potrjuje veljavnost scenarija.
 
-Kar se invalidacije tiče:
-Pozornost se sedaj premakne na nivo ${Math.round(waveStart)} USD.
-Padec pod ta nivo ni zaželen, saj lahko ogrozi scenarij rasti.
+Kar se tiče tveganja:
+Ključni invalidacijski nivo ostaja pri ${Math.round(waveStart)} USD. Padec pod to območje bi lahko pomenil izgubo momentuma in povečal verjetnost globlje korekcije.
 
-Na nižjih časovnih intervalih  bodi posebej pozoren na strukturo dna – prvo nižje dno je lahko zgodnji opozorilni signal.
+Na nižjih časovnih intervalih spremljaj strukturo gibanja – pojav prvega nižjega dna je pogosto eden prvih opozorilnih signalov, da se trend začenja umirjati.
 `;
 
 } else if (currentPrice < target1) {
 
-    analysis = `
-Gibanje se razvija zelo konstruktivno in pot do ${Math.round(target1)} USD je odprta.
+  analysis = `
+Gibanje se razvija stabilno in v skladu s pričakovanji rastočega trenda.
 
-Če bo ta nivo presežen, se ponovno oglasi, da izračunava naslednje tarče.
+Cena postopoma napreduje proti območju ${Math.round(target1)} USD, kar trenutno predstavlja naslednji pomemben cilj. Struktura ostaja zdrava, dokler trg ohranja višja dna in konstanten pritisk kupcev.
 
-Scenarij rasti ostaja veljaven, dokler cena ostaja nad ${Math.round(waveStart)} USD.
+V primeru preboja tega nivoja se odpre prostor za nadaljevanje rasti proti višjim tarčam.
+
+Scenarij ostaja veljaven, dokler cena ostaja nad ${Math.round(waveStart)} USD, kjer se nahaja ključna podpora celotnega vala.
 `;
 
 } else if (currentPrice < target2) {
 
-    analysis = `
-    Val postaja izrazito impulziven.
+  analysis = `
+Val postopoma pridobiva na moči, kar se odraža v vse bolj impulzivni strukturi gibanja.
 
-Obstaja možnost nadaljevanja rasti proti ${Math.round(target2)} USD.
-Bodi pozoren na nivo ${Math.round(target1)} USD, saj lahko padec pod ta nivo nakaže prve znake slabitve.
+Trenutno obstaja realna možnost nadaljevanja rasti proti ${Math.round(target2)} USD. Ob tem je smiselno spremljati območje ${Math.round(target1)} USD, ki lahko ob morebitnem padcu deluje kot prva pomembna podpora.
 
-Invalidacija scenarija ostaja vezana na nivo ${Math.round(waveStart)} USD.
+Če cena izgubi ta nivo, se lahko pojavijo prvi znaki slabitve trenutnega momentuma.
+
+Invalidacija širšega scenarija še vedno ostaja pri ${Math.round(waveStart)} USD.
 `;
 
 } else if (currentPrice < target3) {
 
-    analysis = `
-    Takšna dinamika v enem valu je redka, vendar jo trg trenutno potrjuje.
+  analysis = `
+Trg prehaja v fazo izrazite impulzivnosti, kar pomeni, da je trenutni val nadpovprečno močan.
 
-Naslednja tarča se nahaja pri ${Math.round(target3)} USD.
+Takšna dinamika v enem samem valu ni pogosta, vendar jo trenutna struktura jasno potrjuje. Naslednja ključna tarča se nahaja pri ${Math.round(target3)} USD.
 
-Na tej točki spremljaj:
+Na tej točki je priporočljivo povečati pozornost, predvsem na nižjih časovnih intervalih, kjer se lahko najprej pojavijo znaki izčrpavanja trenda.
 
-nižje časovne intervale
-pojav prvega nižjega dna (zgodnji opozorilni signal)
+Posebej bodi pozoren na:
+– izgubo momentuma
+– pojav prvega nižjega dna
 
-Glavna podpora se trenutno nahaja pri ${Math.round(target2)} USD.
+Območje ${Math.round(target2)} USD trenutno predstavlja najbližjo pomembno podporo.
 `;
 
 } else if (currentPrice < target4) {
 
-    analysis = `
-    Približujemo se izjemno občutljivemu območju pri ${Math.round(target4)} USD.
+  analysis = `
+Cena se približuje izjemno pomembnemu in občutljivemu območju pri ${Math.round(target4)} USD.
 
-Statistično gledano večina valut na tem nivoju doživi zavrnitev, saj gre za zelo močan impulzni val.
-Če pa pride do preboja, se odpre prostor za bistveno višje tarče – vendar na to ni priporočljivo računati vnaprej.
+Statistično gledano se večina gibanj na tej ravni začne umirjati, saj gre za razširjen impulzni val, kjer pogosto pride do izčrpanosti kupcev.
 
-Glavna podpora:
+Možen je scenarij zavrnitve ali vsaj začasne konsolidacije.
 
+Če pa pride do preboja tudi tega nivoja, se odpre prostor za nadaljevanje rasti proti bistveno višjim tarčam – vendar tak scenarij velja za manj verjeten in zahteva dodatno potrditev.
+
+Ključna podpora:
 ${Math.round(target3)} USD
-ob izgubi → možen padec proti ${Math.round(target2)} USD
+
+V primeru izgube tega nivoja:
+možen povratek proti ${Math.round(target2)} USD.
 `;
+    
 } else if (currentPrice < target5) {
 
-    analysis = `
-To je že izjemno močan in redek scenarij.
+  analysis = `
+Trg se nahaja v območju izjemno močnega in razširjenega trenda, kar predstavlja redek scenarij.
 
-Naslednja tarča se nahaja pri ${Math.round(target5)} USD, vendar bodi previden – takšna gibanja se pogosto hitro obrnejo.
+Cena se približuje naslednji tarči pri ${Math.round(target5)} USD, vendar je na tej točki potrebna povečana previdnost.
 
-Kar gre hitro gor, gre lahko hitro tudi dol. 
+Takšna gibanja so pogosto hitra in agresivna, vendar se lahko prav tako hitro obrnejo.
+
+Pomembno pravilo:
+kar raste hitro, se lahko enako hitro tudi korigira.
+
+Zato je ključno sprotno spremljanje strukture in odziva cene na nižjih intervalih.
 `;
+    
 } else if (currentPrice < target6) {
 
-    analysis = `
-Val je izjemno impulziven.
+  analysis = `
+Val prehaja v ekstremno impulzivno fazo, kjer trg presega običajne vzorce gibanja.
 
-Naslednja tarča: ${Math.round(target6)} USD
+Naslednja potencialna tarča se nahaja pri ${Math.round(target6)} USD.
 
-Ne dovoli, da te rast zaslepi – spremljaj nižje intervale in bodi pozoren na prvo nižje dno na krajših intervalih. Če se pojavi, ustrezno ukrepaj.  
+Na tej stopnji je pomembno ohraniti disciplino in ne podleči evforiji, saj so takšna gibanja pogosto nestabilna.
+
+Spremljaj:
+– nižje časovne intervale
+– prve znake izgube momentuma
+– pojav nižjega dna
+
+Ti signali lahko nakazujejo začetek korekcije.
 `;
+    
 } else if (currentPrice < target7) {
 
-    analysis = `
-To je redek primer izjemno močnega trenda.
+  analysis = `
+Gre za redek primer izjemno močnega trenda, kjer trg kaže nadpovprečno stopnjo pospeška.
 
-Naslednja tarča: ${Math.round(target7)} USD
+Naslednja tarča se nahaja pri ${Math.round(target7)} USD.
 
-Ponovno: pozornost na strukturo grafa in prvo nižje dno na nižjih intervalih bo prvo opozorilo, da se lahko trend obrne v obratno smer. 
+Kljub moči gibanja ostaja ključno spremljati strukturo grafa, saj se prav v takšnih fazah pogosto pojavijo nenadni obrati.
+
+Prvi resen opozorilni signal:
+pojav nižjega dna na nižjih časovnih intervalih.
 `;
+    
 } else if (currentPrice < target8) {
 
-    analysis = `
-Takšna rast se pojavi zelo redko.
+  analysis = `
+Takšna rast spada med izjemno redke tržne scenarije, kjer cena dosega ekstremne razširitve.
 
-Naslednja tarča: ${Math.round(target8)} USD
+Naslednja tarča se nahaja pri ${Math.round(target8)} USD.
 
-Če bo ta nivo presežen, se oglasi za nadaljnjo analizo. 
+Na tej točki je priporočljivo razmišljati tudi o upravljanju pozicije in zaščiti dobička.
+
+Če pride do preboja tega nivoja, se oglasi za nadaljnjo analizo, saj vstopamo v območje, kjer standardni modeli postajajo manj zanesljivi.
 `;
+    
 } else if (currentPrice < target9) {
 
-    analysis = `
-Če sva prišla do sem – čestitke.
+  analysis = `
+Če je cena dosegla to območje, se nahajamo v ekstremno redkem scenariju tržnega gibanja.
 
-Gre za ekstremno redek scenarij, kjer večina valut doseže svoj maksimum.
-Naslednja tarča se nahaja pri ${Math.round(target9)} USD.
+Večina instrumentov na tej stopnji doseže svoj vrh ali preide v fazo močne nestabilnosti.
 
-Če pride do preboja:
+Naslednja tarča se nahaja pri ${Math.round(target9)} USD, vendar je nadaljnje gibanje težje predvidljivo.
 
-možno nadaljevanje
-vendar zelo nestabilno
+V primeru dodatnega preboja:
+možno je nadaljevanje rasti,
+vendar običajno z izrazito povečano volatilnostjo.
 
-Ključni signal:
-Padec nazaj pod ${Math.round(target8)} USD lahko pomeni začetek močnejšega popravka. 
+Ključni opozorilni signal:
+padec nazaj pod ${Math.round(target8)} USD lahko pomeni začetek močnejše korekcije.
 
-ZAKLJUČEK
+Zaključek:
+Na tej točki je smiselno podrobno spremljati nižje časovne intervale in analizirati tudi manjše valove znotraj trenutnega gibanja.
 
-Če spremljaš ta val, bodi izjemno pozoren na dogajanje na nižjih časovnih okvirih.
-
-Zelo smiselno je analizirati tudi manjše valove znotraj tega gibanja.
-Če želiš, lahko skupaj pogledava strukturo na nižjih intervalih in poskusiva ujeti vrh.
+Če želiš, lahko skupaj pogledava strukturo in poskusiva natančneje določiti potencialni vrh.
 `;
     
   }
