@@ -118,7 +118,7 @@ Scenarij se razveljavi ob padcu pod ${Math.round(fib0618)} USD.
 } else if (currentPrice > fib0786) {
 
   analysis = `
-Cena je padla pod 0.618 nivo (${Math.round(fib0618)} USD).
+Cena je padla pod zelo pomemben nivo pri (${Math.round(fib0618)} USD) in potrebna je pazljivost, saj se lahko padanje nadaljuje.
 
 To je pomemben signal slabitve trenda.
 
@@ -142,21 +142,53 @@ Scenarij se razveljavi ob vrnitvi nad ${Math.round(fib0786)} USD.
 } else if (currentPrice > target1) {
 
   analysis = `
-Prejšnje dno je bilo izgubljeno, kar potrjuje prehod v padajoč trend.
+Prejšnje dno je bilo prebito, kar potrjuje prehod trga v padajočo fazo.
 
-S tem se odpre prostor za nadaljevanje padca proti ${Math.round(target1)} USD, z možnostjo dosega tudi ${Math.round(target2)} USD.
+S tem se struktura trenda spremeni, pritisk prodajalcev pa ostaja izrazit. Trenutno gibanje nakazuje na nadaljevanje padca proti območju ${Math.round(target1)} USD.
 
-Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
+V primeru nadaljnjega stopnjevanja pritiska se odpre prostor tudi za dosego naslednje tarče pri ${Math.round(target2)} USD.
+
+Za ohranitev scenarija padanja je pomembno, da cena ostane pod ${Math.round(waveStart)} USD. Vrnitev nad ta nivo bi lahko nakazala oslabitev trenutnega trenda in možnost prehoda v konsolidacijo ali obrat.
 `;
+  
 } else if (currentPrice > target2) {
 
   analysis = `
-Prejšnje dno je bilo izgubljeno, kar potrjuje prehod v padajoč trend.
+Padanje se nadaljuje z naraščajočo dinamiko, kar potrjuje, da trg ostaja pod močnim vplivom prodajalcev.
 
-padec do tarče 2  ${Math.round(target2)} USD, z možnostjo dosega tudi tarče 3  ${Math.round(target3)} USD. in tarče 4 ${Math.round(target4)}
+Cena se približuje naslednji pomembni tarči pri ${Math.round(target2)} USD. To območje lahko kratkoročno deluje kot točka umiritve ali začasnega odboja, vendar struktura trenutno še vedno podpira nadaljevanje padanja.
 
-Scenarij se razveljavi ob vrnitvi nad ${Math.round(waveStart)} USD.
+V primeru preboja tega nivoja se odpre prostor za nadaljevanje proti ${Math.round(target3)} USD.
+
+Ključno je spremljati odziv cene na posameznih nivojih ter strukturo na nižjih časovnih intervalih, kjer se pogosto najprej pokažejo znaki morebitnega obrata.
 `;
+
+} else if (currentPrice > target3) {
+
+  analysis = `
+Trg vstopa v fazo izrazitejšega padanja, kjer se dinamika gibanja še dodatno povečuje.
+
+Doseganje območja okoli ${Math.round(target3)} USD kaže na močan impulzni val, v katerem so odboji običajno kratkotrajni in omejeni.
+
+Če se pritisk prodajalcev nadaljuje, obstaja verjetnost nadaljnjega padca proti ${Math.round(target4)} USD.
+
+Na tej točki je priporočljivo še posebej pozorno spremljati nižje časovne intervale, saj se lahko prvi znaki upočasnitve ali obrata pojavijo prav tam – pogosto v obliki prvega višjega dna ali izgube momentuma.
+`;
+
+  } else if (currentPrice > target4) {
+
+  analysis = `
+Cena se nahaja v območju, ki v večini primerov predstavlja končno fazo trenutnega padajočega vala.
+
+Nivo pri ${Math.round(target4)} USD pogosto deluje kot območje izčrpanosti trenda, kjer se prodajni pritisk postopoma zmanjšuje in trg začne iskati ravnotežje.
+
+V večini primerov se na tem območju oblikuje dno vala ali vsaj pomembnejši kratkoročni obrat.
+
+Če pa pride do nadaljnjega padca tudi pod ta nivo, gre za redek in izrazito impulziven scenarij. V tem primeru priporočam, da poskusiš identificirati nov, manjši val na nižjih časovnih intervalih.
+
+Vsak večji val je namreč sestavljen iz podvalov, zato lahko z analizo teh manjših struktur natančneje določiva naslednje potencialne tarče in območje končnega dna.
+`;
+  
 }
 
 } else if (isDowntrend) {
