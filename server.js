@@ -234,7 +234,7 @@ V kolikor biki uspejo prebiti in zadržati ceno nad nivojem **${Math.round(fib06
 
 ---
 
-### 📈 Napredovanje odbojnega vala: Odločilni spopad pod 0.618
+### 📈 Napredovanje odbojnega vala: Odločilni spopad pod ${Math.round(fib0618)} USD
 
 Prva ovira je preteklost. **${pairInput}** se zdaj nahaja v neposredni bližini najpomembnejšega tehničnega območja celotne strukture. Ta faza bo dokončno odgovorila na vprašanje: ali se bo predhodni rastoči trend nadaljeval, ali pa se bo celotno gibanje prelomilo v padajoči val.
 
@@ -257,17 +257,35 @@ Posebej pozorno spremljajte odziv cene na nivoju (${Math.round(fib0618)} USD):**
   } else if (currentPrice < fib0786) {
 
     analysis = `
-### 🚀 Krepitev momentuma v odbojnem valu
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** Odbojni val (Zadnja odpora pred spremembo v rastoči trend)
+*   **Točka odpore (0.786):** ${Math.round(fib0786)} USD
+*   **Naslednji cilj (Vrh):** ${Math.round(waveStart)} USD
+*   **Glavna podpora:** ${Math.round(invalidationLevel)} USD
 
-Odbojni val para ${pairInput} postaja vse bolj suveren. Do dokončne potrditve strukturnega preobrata manjka le še odločen preboj nivoja **${Math.round(fib0786)} USD**.
+---
 
-**Nadaljnji razvoj:**
-*   Uspešen preboj odpira prostor za dvig do do predhodnega vrha (**${Math.round(waveStart)} USD**).
-*   Če bo tudi ta nivo presežen, se fokus usmeri proti prvi pomembnejši dolgoročni tarči pri **${Math.round(target1)} USD**.
+### 🚀 Odločilni preboj pri ${Math.round(fib0786)} USD: Je popravek končan?
 
-Svetujemo spremljanje nižjih časovnih intervalov ob dosegu teh nivojev, saj vsak najmanjši val predstavlja potencialno točko odpore. 
+Instrument **${pairInput}** kaže izjemno suverenost. Potem ko smo uspešno prebili glavni nivo 0.618, se zdaj soočamo z zadnjo tehnično oviro pred vrhom predhodnega vala. Nahajamo se v fazi, kjer se odloča o dokončni spremembi razpoloženja na trgu.
 
-Invalidacija scenarija ostaja pod **${Math.round(invalidationLevel)} USD**.
+**Zadnja obramba medvedov:**
+Nivo pri **${Math.round(fib0786)} USD** v teoriji ni tako masiven kot prejšnji (0.618), vendar ga ne smemo podcenjevati. Predstavlja namreč **zadnjo obrambo prodajalcev** oziroma medvedov. To je točka, kjer tisti, ki še vedno verjamejo v padec, poskušajo ustaviti rast. 
+
+**Konec popravka in sprememba trenda:**
+Preboj tega nivoja bo ponudil zelo zanimivo dogajanje, saj pomeni **popolno spremembo trenutne slike**. Če smo do zdaj govorili o tem, da smo le v popravku (odboju) po padcu, preboj nivoja **${Math.round(fib0786)} USD** uradno naznani, da je popravek končan. Na tej točki odpore se status "odbojnega vala" začne prelivati v nov impulzni rastoči val.
+
+**Kaj pričakovati po preboju?**
+*   **Psihološki premik:** Ko prodajalci izgubijo to linijo, običajno pride do hitrejšega premika proti predhodnemu vrhu (**${Math.round(waveStart)} USD**), saj se zapirajo kratke pozicije (short-covering).
+*   **Dolgoročna tarča:** Uspešen zaključek nad tem nivojem na dnevni ravni odpira pot proti primarnemu cilju pri **${Math.round(target1)} USD**.
+
+**Risk Management (Upravljanje tveganj):**
+Kljub optimizmu ostanite budni. Dokler nivo ni odločno presežen, vedno obstaja možnost zadnjega poskusa zavrnitve.
+*   Spremljajte manjše valove na krajših intervalih – vsak znak šibkosti bi lahko nakazal na t.i. "dvojni vrh" v nastajanju.
+*   **Invalidacija:** Scenarij nadaljevanja rasti ostaja veljaven le, dokler se cena drži nad **${Math.round(invalidationLevel)} USD**.
+
+**Zaključek:** 
+Smo na pragu potrditve novega rastočega trenda. Preboj **${Math.round(fib0786)} USD** bi bil končni dokaz, da so kupci v celoti prevzeli nadzor nad instrumentom **${pairInput}**.
 `;
 
   } else if (currentPrice < waveStart) {
