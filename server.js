@@ -341,7 +341,7 @@ Pomembno je razumeti, da se na večjih časovnih intervalih še vedno lahko izri
 Šele v primeru **konkretnega in čistega preboja** telesa svečnika nad ta nivo bomo lahko z gotovostjo govorili o nadaljevanju dolgoročnega rastočega trenda. Dokler se cena ne stabilizira nad to mejo, možnost zavrnitve na veliki sliki ostaja odprta.
 
 **Vloga zadnje ovire pri ${Math.round(fib1236)} USD:**
-Nivo pri **${Math.round(fib1236)} USD** v tem trenutku služi kot končni filter. **Na tej točki odpore** bomo dobili odgovor, ali je bil premik nad prejšnji vrh le začasen ali pa ima instrument dejansko dovolj moči za dosego končnega cilja. Preboj te točke bi dokončno izničil scenarij dvojnega vrha in potrdil prehod v območje proste poti (modrega neba).
+Nivo pri **${Math.round(fib1236)} USD** v tem trenutku služi kot končni filter. **Na tej točki odpore** bomo dobili odgovor, ali je bil premik nad prejšnji vrh le začasen ali pa ima instrument dejansko dovolj moči za dosego končnega cilja. Preboj te točke bi dokončno izničil scenarij dvojnega vrha in potrdil prehod v območje proti glavnemu tarčnemu območju.
 
 **Tehnični izgled in Risk Management:**
 Trg je trenutno v fazi dokazovanja. Čeprav struktura kaže na moč kupcev, je treba spremljati, kako se bo cena odzvala na povečan prodajni pritisk, ki je običajen pri testiranju vrhov. 
@@ -352,16 +352,36 @@ Trg je trenutno v fazi dokazovanja. Čeprav struktura kaže na moč kupcev, je t
 Preboj vrha je pomemben korak, vendar drama še ni končana. Ključno bo spremljati zaključek svečnikov in odziv na nivoju **${Math.round(fib1236)} USD**, ki bo podal končno sodbo o tem, ali se trend nadaljuje ali pa nas čaka strukturni obrat.
 `;
 
-  } else if (currentPrice < target1) {
+ } else if (currentPrice < target1) {
 
     analysis = `
-### 📊 Stabilen napredek proti tarči
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 📊 Približevanje primarni dolgoročni tarči
+*   **Dolgoročna tarča (1.618):** ${Math.round(target1)} USD
+*   **Ključna podpora vala:** ${Math.round(waveStart)} USD
+*   **Naslednji potencialni pospešek:** Nad ${Math.round(target1)} USD
 
-Gibanje se razvija v skladu s pričakovanji rastočega trenda. Cena postopoma napreduje proti prvi dolgoročni tarči pri **${Math.round(target1)} USD**.
+---
 
-Struktura ostaja zdrava, dokler trg ohranja višja dna. Ključna podpora celotnega vala se nahaja pri **${Math.round(waveStart)} USD** in padec pod ta nivo scenarij dviga invalidira oziroma razveljavi.
+### 📊 Odločilna faza: Približevanje ključni tarči pri ${Math.round(target1)} USD
 
-Če se dogodi preboj nivoja pri **${Math.round(target1)} USD**. mi sporoči in izračunala bova naslednjo tarčo.
+Gibanje instrumenta **${pairInput}** se razvija v skladu s pričakovanji zdravega rastočega trenda, vendar se zdaj hitro približujemo območju, ki velja za najpomembnejšo tehnično raven v celotni strukturi vala. Nivo pri **${Math.round(target1)} USD** ni zgolj še ena številka na grafu – je strateška točka, kjer se lomijo trendi.
+
+**Zakaj je nivo ${Math.round(target1)} USD tako kritičen?**
+V svetu profesionalne tehnične analize velja ta nivo za primarno območje **unovčevanja dobičkov (profit-taking zone)**. Statistični podatki kažejo, da pri več kot 80 % vseh valutnih parov in finančnih instrumentov **na tej točki odpore** pride do močne zavrnitve ali vsaj dolgotrajnejše konsolidacije. To je točka, kjer večina institucionalnih trgovcev zapira svoje pozicije, kar povzroči povečan prodajni pritisk.
+
+**Dva možna scenarja na tej stopnji:**
+
+1.  **Scenarij zavrnitve (80 % verjetnost):** Zaradi množičnega zapiranja pozicij je pričakovati močan odpor. Če biki ne bodo sposobni absorbirati te ponudbe, lahko sledi oster popravek navzdol. To je trenutek, ko se ločijo amaterji od profesionalcev, saj je obvladovanje tveganja tukaj na prvem mestu.
+2.  **Scenarij ekstremnega pospeška:** V tistih redkih primerih (manj kot 20 %), ko trg ta nivo prebije z visoko stopnjo agresije, se zgodi nekaj izjemnega. Preboj nivoja **${Math.round(target1)} USD** običajno deluje kot "raketno gorivo". Gibanje cene se lahko v trenutku izjemno pospeši, saj prodajalci kapitulirajo, kupci pa v evforiji vstopajo v trend, kar ustvari silovit parabolični pospešek.
+
+**Struktura in obvladovanje tveganja:**
+Struktura trenutno ostaja zdrava, dokler trg ohranja višja dna in se ne pojavi znak šibkosti na krajših intervalih. 
+*   **Ključna podpora:** Glavna podpora celotnega vala se nahaja pri **${Math.round(waveStart)} USD**. To je vaša "zadnja linija v pesku" – padec pod ta nivo bi scenarij dviga nemudoma invalidiral oziroma razveljavi. 
+*   **Spremljanje:** Bodite izjemno pozorni na dogajanje v neposredni bližini **${Math.round(target1)} USD**. Vsaka nenadna sprememba volumna bo služila kot zgodnji signal za naslednjo veliko potezo.
+
+**Zaključek:** 
+Nahajamo se v območju najvišje prioritete. Če se dogodi preboj nivoja pri **${Math.round(target1)} USD**, mi nemudoma sporoči. V tem primeru bova morala opustiti standardne modele in izračunati naslednjo tarčo, saj vstopamo v fazo ekstremnega tržnega zagona.
 `;
 
   } else if (currentPrice < target2) {
