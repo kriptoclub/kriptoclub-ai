@@ -320,20 +320,41 @@ Pri trgovanju na vrhovih velja pravilo: ni končano, dokler ni končano!
 Finale je pred nami. Ali bo **${pairInput}** zbral dovolj moči, da prebije ledeno zaveso prodajalcev, ali pa bomo priča umiku? Bodite pozorni na vsako podrobnost – prava drama se šele začenja!
 `;
 
-  } else if (currentPrice < fib1236) {
+} else if (currentPrice < fib1236) {
 
     analysis = `
-### ✅ Potrditev preboja in moči kupcev
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 📈 Rastoči val (Učvrstitev impulznega trenda)
+*   **Zadnja tehnična bariera:** ${Math.round(fib1236)} USD
+*   **Primarna dolgoročna tarča:** ${Math.round(target1)} USD
+*   **Nova ključna podpora:** ${Math.round(waveStart)} USD
 
-Preboj ključnega nivoja odpore je potrjen! To kaže na močan pozitiven momentum in prevlado kupcev.
+---
 
-**Tehnični izgled:**
-Trg ohranja konstruktivno strukturo. Odprta je pot proti dolgoročni tarči **${Math.round(target1)} USD**. 
+### ✅ Potrditev strukturne premoči nad predhodnim vrhom
 
-Potreben je zgolj še en manjši detajl in sicer potreben je preboj nivoja pri  **${Math.round(fib1236)} USD**.  V kolikor pride do tega preboja, mu je pot do **${Math.round(target1)} USD** odprta. 
+Pri instrumentu **${pairInput}** smo bili priča ključnemu tehničnemu dogodku. Z uspešnim prebojem in utrditvijo cene nad predhodnim vrhom pri **${Math.round(waveStart)} USD** se je tržna struktura uradno redefinirala. To ni več zgolj poskus okrevanja, temveč potrjen impulzni rastoči val, ki kaže na visoko stopnjo absorpcije prodajnega pritiska s strani kupcev.
 
-**Obvladovanje tveganja:**
-Ključna podpora se je premaknila na **${Math.round(waveStart)} USD**. Padec pod to območje bi pomenil izgubo zagona.
+**Analiza zadnje ovire pri ${Math.round(fib1236)} USD:**
+Čeprav je glavna smer zdaj jasno začrtana navzgor, se na poti do končnega cilja soočamo s še zadnjim tehničnim filtrom. Gre za nivo pri **${Math.round(fib1236)} USD**, ki predstavlja zadnjo referenčno točko pred območjem t.i. "modrega neba". 
+
+**Na tej točki odpore** se pogosto srečajo zadnji prodajalci, ki poskušajo zaščititi svoje pozicije pred popolno kapitulacijo. Zato je v neposredni bližini te cene povsem pričakovana krajša konsolidacija ali manjši umik, ki trgu služi za nabiranje nove likvidnosti pred končnim skokom.
+
+**Pot do primarne dolgoročne tarče:**
+V kolikor bo nivo pri **${Math.round(fib1236)} USD** odločno presežen (idealno s povečanim volumnom trgovanja), se tehnična slika popolnoma sprosti. Od te točke naprej se pot do primarne dolgoročne tarče pri **${Math.round(target1)} USD** znatno skrajša, saj nad njo praktično ni več zgodovinskih strukturnih ovir, ki bi lahko resneje ogrozile momentum.
+
+**Sprememba vloge nivojev (Support vs Resistance):**
+Eno najpomembnejših pravil tehnične analize je, da predhodna bariera po preboju postane nova opora. 
+*   **Nova meja podpore:** Nivo **${Math.round(waveStart)} USD** zdaj služi kot naša glavna obrambna linija. Dokler se cena uspešno zadržuje nad tem območjem, vsak morebitni manjši padec razumemo kot zdravo korekcijo znotraj močnega rastočega trenda.
+*   **Opozorilni signali:** Vsako zapiranje dnevnega svečnika pod to podporo bi bil prvi resen signal za previdnost, saj bi to nakazovalo na lažni preboj (fakeout), vendar trenutna struktura tak scenarij trenutno potiska v ozadje.
+
+**Risk Management in strategija:**
+V tej fazi je ključno sledenje trendu (trend-following). Priporočljivo je, da se pozornost usmeri na stabilnost gibanja in ne na iskanje vrha.
+*   **Zavarovanje dobičkov:** Zaradi bližine zadnje ovire je smiselno stop-loss naročila pomakniti pod novo podporo pri ${Math.round(waveStart)} USD.
+*   **Opazovanje momentuma:** Spremljajte, kako se **${pairInput}** odziva na dotik cene ${Math.round(fib1236)} USD. Odločen prehod čez to točko bo dokončni signal za dosego naše dolgoročne tarče.
+
+**Zaključek:** 
+Strukturni preobrat je dejstvo. Trg je pokazal svojo moč, zdaj pa potrebuje le še piko na i pri **${Math.round(fib1236)} USD**, da dokončno sprosti pot do zastavljenega cilja pri **${Math.round(target1)} USD**.
 `;
 
   } else if (currentPrice < target1) {
