@@ -194,7 +194,7 @@ Vsak večji val je namreč sestavljen iz podvalov, zato lahko z analizo teh manj
 } else if (isDowntrend) {
 
 
- } if (currentPrice < fib0382) {
+  if (currentPrice < fib0382) {
 
     analysis = `
 ### 📉 Tehnična slika: Iskanje moči v korektivnem odboju
