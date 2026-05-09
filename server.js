@@ -198,8 +198,8 @@ Vsak večji val je namreč sestavljen iz podvalov, zato lahko z analizo teh manj
     analysis = `
 **GLAVNI NIVOJI IN STATUS:**
 *   **Status:** Odbojni val
-*   **Prva točka odpore (0.382):** ${Math.round(fib0382)} USD
-*   **Druga točka odpore (0.618):** ${Math.round(fib0618)} USD
+*   **Prva točka odpore:** ${Math.round(fib0382)} USD
+*   **Druga točka odpore:** ${Math.round(fib0618)} USD
 *   **Glavna podpora:** ${Math.round(waveStart)} USD
 
 ---
@@ -226,15 +226,32 @@ V kolikor biki uspejo prebiti in zadržati ceno nad nivojem **${Math.round(fib06
   } else if (currentPrice < fib0618) {
 
     analysis = `
-### 📈 Napredovanje odbojnega vala
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** Odbojni val (Testiranje ključne meje)
+*   **Prva točka odpore:** ${Math.round(fib0618)} USD
+*   **Druga točka odpore:** ${Math.round(fib0786)} USD
+*   **Glavna podpora:** ${Math.round(invalidationLevel)} USD
 
-Odbojni val se nadaljuje, vendar se približujemo ključni točki preobrata. Trenutno se trg bori za prehod v fazo, kjer bi lahko začeli govoriti o začetku novega impulznega vala v smeri navzgor.
+---
 
-**Ključni nivoji:**
-*   **Glavna točka odpore:** Nahaja se pri **${Math.round(fib0618)} USD**. Gre za izjemno občutljivo območje; dokler smo pod njim, velja vsak dvig le za začasen popravek v smeri navzgor pred novim valom navzdol.
-*   **Potrditev rasti:** Preboj tega nivoja bi najprej pripeljal do testa predhodnega vrha pri **${Math.round(waveStart)} USD**, nato pa proti dolgoročni tarči **${Math.round(target1)} USD**.
+### 📈 Napredovanje odbojnega vala: Odločilni spopad pod 0.618
 
-**Opozorilo:** V primeru padca pod **${Math.round(invalidationLevel)} USD** se trenutni scenarij rasti razveljavi.
+Prva ovira je preteklost. **${pairInput}** se zdaj nahaja v neposredni bližini najpomembnejšega tehničnega območja celotne strukture. Ta faza bo dokončno odgovorila na vprašanje: ali se bo predhodni rastoči trend nadaljeval, ali pa se bo celotno gibanje prelomilo v padajoči val.
+
+**Kritična nivoja odpore:**
+
+1.  **Glavna točka odpore (${Math.round(fib0618)} USD):** To je primarno bojišče. Dokler cena ne zapre dnevnega svečnika nad to mejo, velja celoten odbojni val le za začasen popravek v smeri navzgor pred morebitnim novim valom navzdol. 
+2.  **Sekundarna točka odpore (${Math.round(fib0786)} USD):** Pri tem nivoju je treba upoštevati, da **na tej točki odpore** pritisk običajno ni tako močan kot pri (${Math.round(fib0618)} USD):** . V večini primerov odločen preboj te glavne meje s seboj prinese dovolj zagona, da se nivo (${Math.round(fib0786)} USD):** preseže brez večjih težav. Vendar pa previdnost ostaja na mestu – kljub manjši moči jo je dobro upoštevati kot zadnjo potrditev pred nadaljevanjem rasti proti predhodnemu vrhu oziroma višje.
+
+**Pomembno opozorilo o zavrnitvi:**
+Posebej pozorno spremljajte odziv cene na nivoju (${Math.round(fib0618)} USD):** .  Če pride do močne zavrnitve, to pomeni, da kupci nimajo dovolj moči za preobrat. V takem primeru se rastoči trend, ki smo mu bili priča v preteklosti, dokončno spremeni v padajoči trend, kar običajno vodi v iskanje novega nižjega dna.
+
+**Risk Management (Upravljanje tveganj):**
+*   **Glavna podpora:** Nivo **${Math.round(invalidationLevel)} USD** predstavlja vašo "varnostno mrežo". Padec pod to ceno pomeni popolno razveljavitev trenutnega scenarija, ki predvideva preboj in nadaljevanje rasti.
+*   **Strategija:** Ne prehitevajte trga. Za varnejši vstop je smiselno počakati na potrditev preboja nivoja (${Math.round(fib0618)} USD):** . Če ste že v poziciji, pa je to idealen čas za stop-loss naročila.
+
+**Scenarij rasti:**
+Če biki uspešno prebijejo obe točki odpore, se odpre prost prostor do predhodnega vrha pri **${Math.round(waveStart)} USD** in nato proti dolgoročni tarči pri **${Math.round(target1)} USD**.
 `;
 
   } else if (currentPrice < fib0786) {
