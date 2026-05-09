@@ -291,14 +291,33 @@ Smo na pragu potrditve novega rastočega trenda. Preboj **${Math.round(fib0786)}
   } else if (currentPrice < waveStart) {
 
     analysis = `
-### ⚠️ Približevanje predhodnemu vrhu
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** ⚠️ Rastoči val (Faza odločilne potrditve)
+*   **Točka odpore (Vrh):** ${Math.round(waveStart)} USD
+*   **Zadnja bariera pred prebojem:** ${Math.round(fib1236)} USD
+*   **Kritična podpora:** ${Math.round(invalidationLevel)} USD
 
-Cena se nahaja v neposredni bližini ključne točke **${Math.round(waveStart)} USD**. Na tem območju odpore sta možna dva scenarija:
+---
 
-1. **Scenarij dvojnega vrha: - bearish** Možnost močne zavrnitve. Vzorec bi bil dokončno potrjen šele s padcem pod **${Math.round(waveEnd)} USD**.
-2. **Scenarij preboja: - bullish** Če bo nivo odločno presežen, se začne razvijati nov impulzni val. Zadnja ovira pred dolgoročno tarčo **${Math.round(target1)} USD** je nivo **${Math.round(fib1236)} USD**.
+### ⚔️ Bitka za Preobrat: Na pragu velikega preboja
 
-V primeru padca pod **${Math.round(invalidationLevel)} USD** se bikovski momentum izniči.
+Instrument **${pairInput}** se nahaja v izjemno vznemirljivi fazi. Uradno smo prešli v **rastoči val**, vendar smo se znašli na odločilni prelomnici. Smo v neposredni bližini predhodnega vrha pri **${Math.round(waveStart)} USD**. To je trenutek resnice, ki bo pokazal, ali imajo kupci dovolj sape za nov dolgoročni vzpon, ali pa gre le za zadnji izdihljaj trenutnega zagona.
+
+**⚠️ Scenarij 1: Nevarnost Dvojnega Vrha (Bearish)**
+Čeprav graf trenutno deluje optimistično, se ne smemo prepustiti nepazljivosti. **Na tej točki odpore (${Math.round(waveStart)} USD)** se namreč skriva ena najbolj zahrbtnih pasti – **formacija dvojnega vrha**. To je območje, kjer prodajalci običajno zberejo vse preostale moči za obrambo svojega teritorija.
+
+*   **Pozor:** Scenarij dvojnega vrha bi rastoči val hitro spremenil nazaj v padajočega. Ta negativni vzorec bi bil dokončno potrjen šele, če bi cena od tukaj padla pod **${Math.round(waveEnd)} USD**. Dokler se to ne zgodi, so biki še vedno v igri, vendar je previdnost nujna.
+
+**🚀 Scenarij 2: Odločen preboj navzgor (Bullish)**
+Če biki ohranijo agresijo in nivo pri **${Math.round(waveStart)} USD** odločno pade, se pred nami odpre povsem nova pokrajina. V tem primeru nas čaka le še zadnja tehnična ovira pri **${Math.round(fib1236)} USD**. Če prebijemo tudi to ceno, bo pot do dolgoročne tarče (**${Math.round(target1)} USD**) praktično brez večjih ovir, saj bodo prodajalci prisiljeni v kapitulacijo.
+
+**Risk Management (Upravljanje tveganj):**
+Pri trgovanju na vrhovih velja pravilo: ni končano, dokler ni končano!
+*   **Invalidacija:** Če cena na tej točki odpore popusti in zdrsne pod **${Math.round(invalidationLevel)} USD**, se bikovski momentum izniči, tveganje za globlji padec pa se močno poveča.
+*   **Potrditev:** Za pravo varnost potrebujemo zaprtje dnevnega svečnika nad vrhom. Vse ostalo so lahko le kratkotrajni preboji, ki služijo kot pasti za neprevidne kupce.
+
+**Zaključek:** 
+Finale je pred nami. Ali bo **${pairInput}** zbral dovolj moči, da prebije ledeno zaveso prodajalcev, ali pa bomo priča umiku? Bodite pozorni na vsako podrobnost – prava drama se šele začenja!
 `;
 
   } else if (currentPrice < fib1236) {
