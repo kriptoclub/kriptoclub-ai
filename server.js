@@ -193,19 +193,22 @@ Vsak večji val je namreč sestavljen iz podvalov, zato lahko z analizo teh manj
 
 } else if (isDowntrend) {
 
-  if (currentPrice < fib0382) {
+
+ } if (currentPrice < fib0382) {
 
     analysis = `
-Trenutno se odvija odbojni val, od katerega bo odvisno nadaljnje gibanje cene.
-Obstajata dva ključna nivoja, kjer lahko pride do zavrnitve, zato je na njiju potrebno biti posebej pozoren. Prvi nivo se nahaja v višini 
-${Math.round(fib0382)} USD in drugi nivo se nahaja v višini ${Math.round(fib0618)} USD.
+### 📉 Tehnična slika: Iskanje moči v korektivnem odboju
 
-Preboj prvega nivoja odpira prostor za nadaljevanje rasti proti drugemu nivoju, vendar oba predstavljata potencialno točko zavrnitve.
-Ključnejši med njima je drugi nivo pri ${Math.round(fib0618)} USD. 
-V primeru njegovega preboja se odpre prostor za rast proti predhodnemu vrhu, pri čemer je potrebno spremljati še nivo
- ${Math.round(fib0786)} USD. 
-Nad tem nivojem se poveča verjetnost dviga do predhodnega vrha pri ${Math.round(waveStart)} USD. Če je ta vrh presežen, se lahko začne razvijati nov impulzni val s prvo tarčo rasti pri ${Math.round(target1)} USD.  
+Trenutno se BTC nahaja v fazi **korektivnega odboja**, ki je ključen za določitev kratkoročne usode trenda. Trg se trenutno sooča z dvema kritičnima območjema, kjer se bo odločalo o nadaljnji smeri:
 
+1.  **Prva meja upora (${Math.round(fib0382)} USD):** Ta nivo predstavlja prvo resno oviro za kupce. Uspešen preboj in stabilizacija nad to ceno bi nakazala, da ima trenutni odboj dovolj zagona za resnejši preizkus višjih ravni.
+2.  **Odločilna točka preobrata (${Math.round(fib0618)} USD):** To je najpomembnejša tehnična raven znotraj trenutnega padca. Dokler cena ostaja pod to mejo, tržna struktura ostaja pod kontrolo prodajalcev, vsak dvig pa velja le za začasen popravek.
+
+**Scenarij preobrata:**
+V kolikor biki uspejo prebiti in zadržati ceno nad nivojem **${Math.round(fib0618)} USD**, se močno poveča verjetnost za popolno vrnitev na predhodni vrh pri **${Math.round(waveStart)} USD**. 
+
+**Dolgoročni cilj:**
+Če se kupni pritisk nadaljuje in trg preseže vrh zadnjega vala, se medvedji scenarij izniči. V tem primeru se odpre pot za razvoj novega naraščajočega trenda s primarno tarčo pri **${Math.round(target1)} USD**.
 `;
 
   } else if (currentPrice < fib0618) {
