@@ -196,18 +196,31 @@ Vsak večji val je namreč sestavljen iz podvalov, zato lahko z analizo teh manj
   if (currentPrice < fib0382) {
 
     analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** Odbojni val
+*   **Prva točka odpore (0.382):** ${Math.round(fib0382)} USD
+*   **Druga točka odpore (0.618):** ${Math.round(fib0618)} USD
+*   **Glavna podpora:** ${Math.round(waveStart)} USD
+
+---
+
 ### 📉 Tehnična slika: Iskanje moči v odbojnem valu
 
-Trenutno se BTC nahaja v fazi **odbojnega vala**, ki je ključen za določitev kratkoročne usode trenda. Trg se sooča z dvema kritičnima območjema, kjer se bo odločalo o nadaljnji smeri:
+Trenutno se **${pairInput}** nahaja v kritični fazi **odbojnega vala**, ki sledi predhodnemu padcu. Ta faza je odločilna, saj bo njena moč določila dolgoročno usmeritev trenda. Nahajamo se na prelomnici: ali se bo predhodna rast nadaljevala ali pa se bo struktura dokončno spremenila v padajoči trend.
 
-1. **Prva meja odpore (${Math.round(fib0382)} USD):** Ta nivo predstavlja prvo resno oviro za kupce. Uspešen preboj in stabilizacija nad to ceno bi nakazala, da ima trenutni odboj dovolj zagona za resnejši preizkus višjih ravni.
-2. **Odločilna točka preobrata (${Math.round(fib0618)} USD):** To je najpomembnejša tehnična raven znotraj trenutnega padca. Dokler cena ostaja pod to mejo, tržna struktura ostaja pod kontrolo prodajalcev, vsak dvig pa velja le za začasen popravek v smeri navzgor pred novim valom navzdol.
+**Ključna območja za spremljanje:**
+
+1.  **Prva točka odpore (${Math.round(fib0382)} USD):** Ta nivo predstavlja prvo resno preizkušnjo za kupce. Uspešen preboj in stabilizacija nad to ceno bi nakazala, da ima trenutni odbojni val dovolj zagona za nadaljevanje rasti.
+2.  **Odločilna točka odpore (${Math.round(fib0618)} USD):** To je najpomembnejša tehnična raven. Dokler cena ostaja pod to mejo, celoten dvig velja le za začasen popravek v smeri navzgor pred morebitnim novim valom navzdol.
+
+**Pomembno opozorilo:**
+Prehod iz padajočega v odbojni val zahteva previdnost. Če cena preseže navedene nivoje, se lahko predhodni rastoči trend uspešno nadaljuje. Vendar pa je treba biti posebej pozoren na morebitno **zavrnitev na teh dveh nivojih. Če pride na tej točki odpore do ponovnega pritiska prodajalcev in zavrnitve, se lahko celotna struktura spremeni in ta trgovalni par preide iz rastočega v  padajoči val.
 
 **Scenarij preobrata:**
-V kolikor biki uspejo prebiti in zadržati ceno nad nivojem **${Math.round(fib0618)} USD**, se močno poveča verjetnost za popolno vrnitev na predhodni vrh pri **${Math.round(waveStart)} USD**.
+V kolikor biki uspejo prebiti in zadržati ceno nad nivojem **${Math.round(fib0618)} USD**, se močno poveča verjetnost za popolno vrnitev na predhodni vrh pri **${Math.round(waveStart)} USD**. 
 
 **Dolgoročna tarča:**
-Če se nakupni pritisk nadaljuje in trg preseže vrh zadnjega vala, se medvedji scenarij izniči. V tem primeru se odpre pot za razvoj novega naraščajočega trenda s primarno tarčo pri **${Math.round(target1)} USD**.
+Če se nakupni pritisk nadaljuje in trg preseže vrh zadnjega vala, se medvedji scenarij izniči, kar odpira pot do primarne dolgoročne tarče pri **${Math.round(target1)} USD**.
 `;
 
   } else if (currentPrice < fib0618) {
