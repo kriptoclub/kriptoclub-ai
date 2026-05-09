@@ -331,30 +331,25 @@ Finale je pred nami. Ali bo **${pairInput}** zbral dovolj moči, da prebije lede
 
 ---
 
-### ✅ Potrditev strukturne premoči nad predhodnim vrhom
+### ✅ Premik nad predhodni vrh: Preboj ali zgolj testiranje likvidnosti?
 
-Pri instrumentu **${pairInput}** smo bili priča ključnemu tehničnemu dogodku. Z uspešnim prebojem in utrditvijo cene nad predhodnim vrhom pri **${Math.round(waveStart)} USD** se je tržna struktura uradno redefinirala. To ni več zgolj poskus okrevanja, temveč potrjen impulzni rastoči val, ki kaže na visoko stopnjo absorpcije prodajnega pritiska s strani kupcev.
+Pri instrumentu **${pairInput}** smo zabeležili premik nad predhodni vrh pri **${Math.round(waveStart)} USD**. Čeprav se tehnična slika na prvi pogled zdi izrazito bikovska, je na tej stopnji nujna trezna presoja. Dejstvo, da je cena presegla vrh, še ne pomeni, da je nevarnost končana – nasprotno, prav tukaj se pogosto odloča o usodi "velike slike".
 
-**Analiza zadnje ovire pri ${Math.round(fib1236)} USD:**
-Čeprav je glavna smer zdaj jasno začrtana navzgor, se na poti do končnega cilja soočamo s še zadnjim tehničnim filtrom. Gre za nivo pri **${Math.round(fib1236)} USD**, ki predstavlja zadnjo referenčno točko pred območjem t.i. "modrega neba". 
+**⚠️ Previdnost pri vzorcu dvojnega vrha:**
+Pomembno je razumeti, da se na večjih časovnih intervalih še vedno lahko izriše vzorec **dvojnega vrha**. V tehnični analizi sence svečnikov (wicki) ne štejejo veliko, če jim ne sledi konkretna potrditev. Če cena zgolj "pokuka" čez vrh in se nato hitro vrne pod njega, to ne velja za preboj, temveč za t.i. "fakeout" ali lažni signal.
 
-**Na tej točki odpore** se pogosto srečajo zadnji prodajalci, ki poskušajo zaščititi svoje pozicije pred popolno kapitulacijo. Zato je v neposredni bližini te cene povsem pričakovana krajša konsolidacija ali manjši umik, ki trgu služi za nabiranje nove likvidnosti pred končnim skokom.
+Šele v primeru **konkretnega in čistega preboja** telesa svečnika nad ta nivo bomo lahko z gotovostjo govorili o nadaljevanju dolgoročnega rastočega trenda. Dokler se cena ne stabilizira nad to mejo, možnost zavrnitve na veliki sliki ostaja odprta.
 
-**Pot do primarne dolgoročne tarče:**
-V kolikor bo nivo pri **${Math.round(fib1236)} USD** odločno presežen (idealno s povečanim volumnom trgovanja), se tehnična slika popolnoma sprosti. Od te točke naprej se pot do primarne dolgoročne tarče pri **${Math.round(target1)} USD** znatno skrajša, saj nad njo praktično ni več zgodovinskih strukturnih ovir, ki bi lahko resneje ogrozile momentum.
+**Vloga zadnje ovire pri ${Math.round(fib1236)} USD:**
+Nivo pri **${Math.round(fib1236)} USD** v tem trenutku služi kot končni filter. **Na tej točki odpore** bomo dobili odgovor, ali je bil premik nad prejšnji vrh le začasen ali pa ima instrument dejansko dovolj moči za dosego končnega cilja. Preboj te točke bi dokončno izničil scenarij dvojnega vrha in potrdil prehod v območje proste poti (modrega neba).
 
-**Sprememba vloge nivojev (Support vs Resistance):**
-Eno najpomembnejših pravil tehnične analize je, da predhodna bariera po preboju postane nova opora. 
-*   **Nova meja podpore:** Nivo **${Math.round(waveStart)} USD** zdaj služi kot naša glavna obrambna linija. Dokler se cena uspešno zadržuje nad tem območjem, vsak morebitni manjši padec razumemo kot zdravo korekcijo znotraj močnega rastočega trenda.
-*   **Opozorilni signali:** Vsako zapiranje dnevnega svečnika pod to podporo bi bil prvi resen signal za previdnost, saj bi to nakazovalo na lažni preboj (fakeout), vendar trenutna struktura tak scenarij trenutno potiska v ozadje.
-
-**Risk Management in strategija:**
-V tej fazi je ključno sledenje trendu (trend-following). Priporočljivo je, da se pozornost usmeri na stabilnost gibanja in ne na iskanje vrha.
-*   **Zavarovanje dobičkov:** Zaradi bližine zadnje ovire je smiselno stop-loss naročila pomakniti pod novo podporo pri ${Math.round(waveStart)} USD.
-*   **Opazovanje momentuma:** Spremljajte, kako se **${pairInput}** odziva na dotik cene ${Math.round(fib1236)} USD. Odločen prehod čez to točko bo dokončni signal za dosego naše dolgoročne tarče.
+**Tehnični izgled in Risk Management:**
+Trg je trenutno v fazi dokazovanja. Čeprav struktura kaže na moč kupcev, je treba spremljati, kako se bo cena odzvala na povečan prodajni pritisk, ki je običajen pri testiranju vrhov. 
+*   **Nova meja podpore:** Območje **${Math.round(waveStart)} USD** zdaj deluje kot naša primarna podpora. Dokler se cena uspešno zadržuje nad njo, bikovski scenarij ohranja prednost. 
+*   **Opozorilni signali:** Če bi se cena hitro vrnila pod podporo, bi to nakazovalo na izgubo momentuma in potrditev prodajnega pritiska na veliki sliki.
 
 **Zaključek:** 
-Strukturni preobrat je dejstvo. Trg je pokazal svojo moč, zdaj pa potrebuje le še piko na i pri **${Math.round(fib1236)} USD**, da dokončno sprosti pot do zastavljenega cilja pri **${Math.round(target1)} USD**.
+Preboj vrha je pomemben korak, vendar drama še ni končana. Ključno bo spremljati zaključek svečnikov in odziv na nivoju **${Math.round(fib1236)} USD**, ki bo podal končno sodbo o tem, ali se trend nadaljuje ali pa nas čaka strukturni obrat.
 `;
 
   } else if (currentPrice < target1) {
