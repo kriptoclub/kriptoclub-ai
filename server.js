@@ -253,7 +253,7 @@ Statistični podatki v tehnični analizi so neizprosni. Podobno kot pri rastoče
 *   **Ohranjanje scenarija:** Za ohranitev trenutne padajoče strukture je pomembno, da cena ostane pod prejšnjim dnom pri **${Math.round(waveStart)} USD**. Vsaka vrnitev nad to mejo bi pomenila resno slabitev prodajalcev in verjeten prehod v konsolidacijo.
 
 **Zaključek:** 
-Nahajamo se na točki, kjer se določa globina trenutnega padca. Ali bo nivo pri **${Math.round(target1)} USD** služil kot dno, kjer bodo kupci ponovno prevzeli nadzor, ali pa nas čaka preboj v fazo proste padavine? Odgovor bomo dobili ob prvem stiku s to kritično ceno.
+Nahajamo se na točki, kjer se določa globina trenutnega padca. Ali bo nivo pri **${Math.round(target1)} USD** služil kot dno, kjer bodo kupci ponovno prevzeli nadzor, ali pa nas čaka preboj v fazo prostega padanja? Odgovor bomo dobili ob prvem stiku s to kritično ceno.
 `;
   
 } else if (currentPrice > target2) {
