@@ -370,7 +370,7 @@ Gibanje instrumenta **${pairInput}** se razvija v skladu s pričakovanji, vendar
 Pomembno je razumeti, da nivo pri **${Math.round(target1)} USD** v svetu profesionalnega trgovanja velja za primarno območje za unovčevanje dobičkov (profit-taking). Statistični podatki kažejo, da pri več kot 80 % primerov **na tej točki odpore** pride do močne zavrnitve. Večina institucionalnih trgovcev ima na tej ravni nastavljena prodajna naročila, kar ustvari močan pritisk na ceno.
 
 **Strategija in obvladovanje tveganja na krajših intervalih:**
-Ker je prejšnji vrh pri ${Math.round(waveStart)} USD za učinkovito invalidacijo zdaj preveč oddaljen, je ključno, da svojo pozornost preusmerite na krajše časovne intervale (npr. 15min ali 1h).
+Ker je prejšnji vrh pri ${Math.round(waveStart)} USD za učinkovito invalidacijo zdaj preveč oddaljen, je ključno, da svojo pozornost preusmerite na krajše časovne intervale (npr. 1h ali 4h).
 
 *   **Identifikacija šibkosti:** Na teh krajših intervalih bodite pozorni na strukturo gibanja. Prvi jasen znak, da se trend obrača navzdol, bo formacija **prvega nižjega dna**. To bo prvi realni signal, da kupci izgubljajo moč in da prodajalci začenjajo prevzemati nadzor nad ceno.
 *   **Spremljanje volumna:** Bodite izjemno pozorni na dogajanje v neposredni bližini **${Math.round(target1)} USD**. Vsaka nenadna sprememba volumna ali neuspešen poskus preboja bo služil kot zgodnji signal za naslednjo večjo potezo.
@@ -382,14 +382,39 @@ Kljub temu da 80 % trgovcev na tej točki unovčuje dobičke, obstaja manjša ve
 Nahajamo se na nivoju, ki zahteva maksimalno zbranost. Če se dogodi preboj nivoja pri **${Math.round(target1)} USD**, mi sporoči in izračunala bova naslednjo tarčo, saj v tem primeru vstopamo v fazo ekstremnega tržnega zagona.
 `;
 
-  } else if (currentPrice < target2) {
+ } else if (currentPrice < target2) {
 
     analysis = `
-### ⚡ Impulzna faza v vzponu
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** ⚡ Ekstremna impulzna faza (FOMO faza)
+*   **Naslednja dolgoročna tarča:** ${Math.round(target2)} USD
+*   **Glavna podpora (Prejšnja tarča):** ${Math.round(target1)} USD
+*   **Taktični fokus:** Spremljanje strukturnih obratov na nižjih intervalih
 
-Val pridobiva na agresivnosti. Trenutno ciljamo na naslednjo dolgoročno tarčo pri **${Math.round(target2)} USD**.
+---
 
-Območje **${Math.round(target1)} USD** sedaj deluje kot prva pomembna podpora. Če cena izgubi ta nivo, je to prvi znak upočasnitve trenutnega pritiska kupcev.
+### ⚡ Impulzna faza v polnem vzponu: Vstop v območje evforije
+
+Instrument **${pairInput}** je vstopil v fazo, ki jo v svetu trgovanja vidimo le redko. Statistični podatki so neizprosni: zgolj **20 % trgovalnih parov** uspešno preseže nivo ${Math.round(target1)} USD in nadaljuje svojo pot navzgor. Ker se nahajamo v tej elitni kategoriji, smo priča dodatnemu in izjemno konkretnemu nakupnemu pospešku.
+
+**Psihologija trgovanja in pojav FOMO:**
+Na tej stopnji se narava trgovanja spremeni. Racionalne odločitve, podprte s podatki in fundamenti, zamenja **FOMO** (Fear Of Missing Out – strah pred zamujeno priložnostjo). V tej fazi kupci ne trgujejo več na podlagi analize, temveč na podlagi čustev. 
+
+Zavlada prepričanje, da bo cena rasla v nedogled, kar privabi val neizkušenih kupcev, ki vstopajo v trg le zato, ker se bojijo, da bodo zamudili "življenjsko priložnost". Ta kolektivna evforija ustvarja parabolično rast, ki pa je po svoji naravi krhka.
+
+**⚠️ Opozorilo glede tveganja:**
+Vstopi pri takšnih nivojih so povezani z **izjemnim tveganjem**. Ker trg poganjajo čustva, se lahko kadarkoli zgodi nenadna in silovita sprememba smeri. Ti obrati so pogosto hitri in brez predhodnih opozoril na dnevnih intervalih, saj se likvidnost kupcev ob prvem znaku strahu hitro umakne.
+
+**Navodila za imetnike pozicij:**
+Če ste že v poziciji, je ključno ohraniti disciplino in ne podleči splošni evforiji. 
+*   **Spremljanje krajših intervalov:** Zaščita dobička mora postati vaša prioriteta. Preklopite na krajše časovne intervale (npr. 15min ali 5min). 
+*   **Prvi signal za izstop:** **Na tej točki odpore**, ko se približujemo ${Math.round(target2)} USD, bodite pozorni na strukturo. Pojav **prvega nižjega dna** na teh intervalih bo prvi realni znak, da se momentum izčrpava in da se pripravlja obrat trenda navzdol.
+
+**Tehnična podpora:**
+Najpomembnejša podpora se je zdaj uradno premaknila na nivo **${Math.round(target1)} USD**. Dokler se cena drži nad to mejo, impulz ostaja aktiven, vendar vsak padec pod ta nivo pomeni takojšnjo upočasnitev in verjetno globoko korekcijo celotnega vala.
+
+**Zaključek:** 
+Uživajte v momentu, a trgujte z glavo, ne s srcem. Naslednja dolgoročna tarča pri **${Math.round(target2)} USD** je na dosegu roke, vendar zahteva maksimalno zbranost in sprotno prilagajanje tveganja.
 `;
 
   } else if (currentPrice < target3) {
