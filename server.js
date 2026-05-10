@@ -95,12 +95,36 @@ if (isUptrend) {
 
 if (currentPrice > fib0382) {
 
-  analysis = `
-Trenutno poteka zdrava korekcija po predhodni rasti.
+    analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 📉 Zdrava korekcija (Iskanje vstopne točke)
+*   **Prva vstopna točka:** ${Math.round(fib0382)} USD
+*   **Druga vstopna točka:** ${Math.round(fib0618)} USD
+*   **Potrditev konca popravka:** Preboj nad ${Math.round(waveEnd)} USD
 
-Dokler cena ostaja nad ${Math.round(fib0382)} USD, ostaja struktura trenda stabilna in obstaja verjetnost nadaljevanja rasti.
+---
 
-Scenarij se razveljavi ob padcu pod ${Math.round(fib0618)} USD.
+### 🔍 Faza popravka: Kje se skriva naslednja priložnost?
+
+Trenutno se nahajamo v obdobju, ko se po močni rasti dogaja pričakovana in zdrava korekcija. To ni čas za negotovost, temveč za pripravo na optimalen vstop za nadaljevanje rastočega trenda. V tej fazi sta ključna dva nivoja, ki služita kot magnet za ceno in potencialno odskočišče.
+
+**Ključni scenariji za odboj in nadaljevanje:**
+
+1.  **Prvi nivo podpore pri ${Math.round(fib0382)} USD:** To je prva točka, kjer se pogosto ustavijo najmočnejši trendi. Že to, da instrument pokaže reakcijo na tem nivoju, je izjemno pozitiven znak, saj potrjuje, da trg spoštuje to ključno tehnično mejo. Odboj od te točke nakazuje na ohranitev močnega pritiska kupcev.
+2.  **Druga vstopna točka pri ${Math.round(fib0618)} USD:** Če cena ne zadrži prvega nivoja, se fokus takoj preusmeri sem. To območje velja za tehnično najmočnejšo točko za vstop. Odboj od tod velja za izjemno konstruktivnega in je pogosto temelj za nove vrhove.
+3.  **Potrditev konca popravka:** Če se cena odbije od enega izmed zgornjih nivojev in nato uspešno prebije predhodni vrh pri **${Math.round(waveEnd)} USD**, je s popravkom uradno konec. V tem primeru vstopamo v naslednji impulzni val rasti.
+
+**Strategija opazovanja:**
+Namesto nastavljanja naročil na slepo, je **na tej točki odpore** (oziroma podpore) priporočljivo opazovati odziv trga:
+
+*   **Spremljanje nivojev:** Nastavite si opozorila za ceni ${Math.round(fib0382)} USD in ${Math.round(fib0618)} USD. Če prvi nivo pri ${Math.round(fib0382)} USD pade, je zelo verjetno, da bo cena potegnila vse do ${Math.round(fib0618)} USD.
+*   **Iskanje potrditve:** Ko cena doseže nivo, opazujte graf. Formacija **zelenega 4-urnega svečnika** takoj po dotiku nivoja je prvi resen indikator, da so kupci ponovno prevzeli nadzor. To je precej varnejši signal za vstop kot zgolj čakanje na dotik cene.
+
+**Obvladovanje tveganja:**
+Dokler se cena zadržuje nad ${Math.round(fib0382)} USD, struktura trenda ostaja zelo agresivna. Nivo pri **${Math.round(fib0618)} USD** pa predstavlja zadnjo mejo, ki še ohranja bikovski scenarij veljaven. Vsak padec pod to mejo bi zahteval ponovno oceno celotne strukture gibanja.
+
+**Zaključek:** 
+Ohranite fokus na ključnih cenah. Trg nam ponuja priložnost za vstop po ugodnejših vrednostih. Ključno vprašanje ostaja, kateri nivo bo služil kot dokončni odriv za preboj nad predhodni vrh pri **${Math.round(waveEnd)} USD**.
 `;
 
 } else if (currentPrice > fib0618) {
