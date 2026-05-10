@@ -225,14 +225,35 @@ Nahajamo se v območju maksimalne napetosti. Ali bo nivo pri **${Math.round(wave
 
 } else if (currentPrice > target1) {
 
-  analysis = `
-Prejšnje dno je bilo prebito, kar potrjuje prehod trga v padajočo fazo.
+    analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 📉 Padajoči trend (Doseganje ključne spodnje tarče)
+*   **Primarna spodnja tarča:** ${Math.round(target1)} USD
+*   **Naslednja kritična meja:** ${Math.round(target2)} USD
+*   **Glavna odporna cona:** ${Math.round(waveStart)} USD
 
-S tem se struktura trenda spremeni, pritisk prodajalcev pa ostaja izrazit. Trenutno gibanje nakazuje na nadaljevanje padca proti območju ${Math.round(target1)} USD.
+---
 
-V primeru nadaljnjega stopnjevanja pritiska se odpre prostor tudi za dosego naslednje tarče pri ${Math.round(target2)} USD.
+### 📉 Doseganje ključnega nivoja: Odločilna bitka pri ${Math.round(target1)} USD
 
-Za ohranitev scenarija padanja je pomembno, da cena ostane pod ${Math.round(waveStart)} USD. Vrnitev nad ta nivo bi lahko nakazala oslabitev trenutnega trenda in možnost prehoda v konsolidacijo ali obrat.
+Instrument **${pairInput}** je po preboju prejšnjega dna uradno prešel v močno padajočo fazo. Struktura trenda se je s tem premikom korenito spremenila, pritisk prodajalcev pa ostaja izrazit. Trenutno se približujemo območju pri **${Math.round(target1)} USD**, ki predstavlja najpomembnejšo tehnično točko v celotnem padajočem valu.
+
+**Pomen nivoja ${Math.round(target1)} USD (Pravilo 80 %):**
+Statistični podatki v tehnični analizi so neizprosni. Podobno kot pri rastočem trendu, se tudi v fazi padanja **v 80 % primerov** gibanje ustavi ali vsaj začasno obrne prav na tej stopnji. Gre za območje, kjer večina prodajalcev unovčuje svoje dobičke ("short-covering"), hkrati pa tisti kupci, ki čakajo na ugoden vstop, tukaj vidijo zadnjo priložnost za odboj. 
+
+**Kdaj nastopi prava katastrofa?**
+Čeprav je odboj od te točke statistično verjetnejši, moramo biti pripravljeni na scenarij kapitulacije. V kolikor nivo pri **${Math.round(target1)} USD** ne zdrži in se cena pod njim stabilizira, lahko sledi **prava katastrofa**. Izguba tega nivoja običajno sproži verižno reakcijo, kjer kupci dokončno obupajo, prodajni pritisk pa se izjemno stopnjuje. V tem primeru ne govorimo več o nadzorovanem padcu, temveč o zelo konkretnem in agresivnem zlomu cene.
+
+**Naslednja postaja v primeru zloma:**
+Če ta ključna meja pade, se tehnični prostor popolnoma izprazni. Pot do naslednje tarče pri **${Math.round(target2)} USD** postane odprta, gibanje pa se lahko zaradi panike na trgu močno pospeši. 
+
+**Strategija in spremljanje:**
+**Na tej točki odpore** (ki zdaj deluje kot ključna podpora) je nujna maksimalna zbranost:
+*   **Iskanje odboja:** Spremljajte, ali se bo pri ceni **${Math.round(target1)} USD** pojavil močan odziv kupcev. Odboj od tega nivoja bi bil prvi znak, da se padajoči val zaključuje.
+*   **Ohranjanje scenarija:** Za ohranitev trenutne padajoče strukture je pomembno, da cena ostane pod prejšnjim dnom pri **${Math.round(waveStart)} USD**. Vsaka vrnitev nad to mejo bi pomenila resno slabitev prodajalcev in verjeten prehod v konsolidacijo.
+
+**Zaključek:** 
+Nahajamo se na točki, kjer se določa globina trenutnega padca. Ali bo nivo pri **${Math.round(target1)} USD** služil kot dno, kjer bodo kupci ponovno prevzeli nadzor, ali pa nas čaka preboj v fazo proste padavine? Odgovor bomo dobili ob prvem stiku s to kritično ceno.
 `;
   
 } else if (currentPrice > target2) {
