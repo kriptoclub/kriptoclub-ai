@@ -288,14 +288,36 @@ Nahajamo se v fazi, kjer prevladuje pesimizem. Čeprav se nivo pri **${Math.roun
 
 } else if (currentPrice > target3) {
 
-  analysis = `
-Trg vstopa v fazo izrazitejšega padanja, kjer se dinamika gibanja še dodatno povečuje.
+    analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 🔥 Ekstremna kapitulacija (Redko videna katastrofa)
+*   **Trenutna tarča:** ${Math.round(target3)} USD
+*   **Naslednja tarča zloma:** ${Math.round(target4)} USD
+*   **Primarni interval za trend:** 1h
+*   **Taktika za lovljenje dna:** 5min (izjemno visoko tveganje)
 
-Doseganje območja okoli ${Math.round(target3)} USD kaže na močan impulzni val, v katerem so odboji običajno kratkotrajni in omejeni.
+---
 
-Če se pritisk prodajalcev nadaljuje, obstaja verjetnost nadaljnjega padca proti ${Math.round(target4)} USD.
+### 🔥 Faza popolnega zloma: Približevanje Tarči 3 (${Math.round(target3)} USD)
 
-Na tej točki je priporočljivo še posebej pozorno spremljati nižje časovne intervale, saj se lahko prvi znaki upočasnitve ali obrata pojavijo prav tam – pogosto v obliki prvega višjega dna ali izgube momentuma.
+Instrument **${pairInput}** trenutno prehaja skozi fazo izrazitega in neusmiljenega padanja, ki jo v svetu trgovanja vidimo le redko. Nahajamo se v stanju ekstremne kapitulacije. Velja neizprosno tržno pravilo: **kar gre hitro dol, gre običajno še hitreje**, saj se v tej fazi sprožijo množične likvidacije in prisilne prodaje, ki ceno potiskajo v skoraj vertikalen pad.
+
+**⚠️ Opozorilo: Lovljenje padajočega noža**
+> **Pomembno:** Iskanje dna pri ceni **${Math.round(target3)} USD** v tej fazi predstavlja t.i. "lovljenje padajočega noža". To je eden najnevarnejših podvigov v trgovanju, saj se momentum prodajalcev ne ustavi ob prvem dotiku nivoja. Tveganje je izjemno visoko, saj se lahko smer gibanja kadarkoli še dodatno zaostri, preden pride do kakršne koli stabilizacije.
+
+**Taktični pristop in časovni intervali:**
+Zaradi ekstremne hitrosti gibanja moramo spremeniti način opazovanja grafa.
+*   **Glavni nadzor (1h interval):** Ta interval ostaja vaš primarni vir informacij o smeri trenda. Dokler na 1h grafu ne vidimo jasne zaustavitve, je vsako upanje na obrat preuranjeno.
+*   **Iskanje dna (5min interval):** Šele ko se cena dejansko približa območju **${Math.round(target3)} USD**, postane uporaba 5-minutnega intervala smiselna. Tam iščemo mikroskopske znake, da se prodajni pritisk izčrpava – npr. nenadne skoke volumna brez nadaljnjega padca cene ali prvo formacijo višjega dna.
+
+**Scenarij nadaljevanja katastrofe:**
+**Na tej točki odpore** (ki zdaj deluje kot zadnja bariera pred še globljim breznom) so odboji običajno kratkotrajni in služijo le kot "past za kupce". Če ta nivo ne zdrži, se tehnična slika popolnoma poruši, kar odpira pot proti naslednji tarči pri **${Math.round(target4)} USD**. V takšnem okolju so vsi klasični indikatorji prenasičeni, trg pa poganja izključno surova panika.
+
+**Navodilo za spremljanje:**
+Bodite izjemno pozorni na obnašanje cene v neposredni bližini **${Math.round(target3)} USD**. Prvi realni signal, da se katastrofa umirja, bo prehod iz vertikalnega padanja v bočno konsolidacijo na krajših intervalih. Dokler se to ne zgodi, trg ostaja v fazi proste padavine.
+
+**Zaključek:** 
+Nahajamo se v območju, kjer se pišejo zgodbe o velikih izgubah in redkih priložnostih. Doseganje **${Math.round(target3)} USD** zahteva maksimalno zbranost in hladno glavo. Ne dovolite, da vas čustva prisilijo v vstop predčasno – počakajte na potrditev strukture, preden sploh razmišljate o postavitvi prve nakupne pozicije.
 `;
 
   } else if (currentPrice > target4) {
