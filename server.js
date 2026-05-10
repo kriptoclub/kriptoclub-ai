@@ -197,7 +197,7 @@ Nahajamo se na prelomnici. Ta nivo je odločilna tehnična bariera, ki loči tre
 
     analysis = `
 **GLAVNI NIVOJI IN STATUS:**
-*   **Status:** 📉 Testiranje prejšnjega dna (Vzorec dvojnega dna)
+*   **Status:** 📉 Prehod v padajoči trend  - Testiranje prejšnjega dna (Vzorec dvojnega dna)
 *   **Kritična podpora (Prejšnje dno):** ${Math.round(waveStart)} USD
 *   **Zadnji tehnični blažilec:** ${Math.round(fib1236)} USD
 *   **Naslednja spodnja tarča:** ${Math.round(target1)} USD
@@ -206,22 +206,18 @@ Nahajamo se na prelomnici. Ta nivo je odločilna tehnična bariera, ki loči tre
 
 ### 🛡️ Moment resnice: Formacija dvojnega dna pri ${Math.round(waveStart)} USD
 
-Instrument **${pairInput}** je dosegel točko, kjer se odloča o dolgoročni usodi prejšnje rasti. Nahajamo se neposredno nad izhodiščem prejšnjega vala, kar v tehnični analizi odpira vrata za formacijo vzorca **dvojnega dna**. To je eden najbolj prepoznavnih preobratnih vzorcev, ki lahko sproži silovit odboj, vendar le, če kupci tukaj pokažejo absolutno odločnost.
+Instrument **${pairInput}** je dosegel točko, kjer se odloča o dolgoročni usodi celotnega prejšnjega gibanja. Nahajamo se neposredno nad izhodiščem prejšnjega vala, kar v tehnični analizi odpira vrata za formacijo vzorca **dvojnega dna**. To je eden najbolj prepoznavnih preobratnih vzorcev, ki lahko sproži ponoven vzpon, vendar le, če kupci na tej stopnji pokažejo absolutno odločnost.
 
 **Statistika in verjetnost:**
-Vzorec dvojnega dna je statistično uspešen v približno **60 % do 70 %** primerih, kadar se pojavi v zdravem tržnem okolju. Vendar pa moramo biti realni: ko cena enkrat pade tako globoko in testira prejšnje dno, to pomeni, da je prodajni pritisk izjemno močan. Če ta nivo pade, se verjetnost za hitro okrevanje drastično zmanjša, saj se tehnična struktura trenda uradno poruši.
+Vzorec dvojnega dna je statistično uspešen v približno **60 % do 70 %** primerih, kadar se pojavi v stabilnem tržnem okolju. Vendar pa moramo biti realni: ko cena enkrat testira prejšnje dno, to pomeni, da je prodajni pritisk v zadnjem obdobju močno narasel. Če ta nivo pade, se tehnična struktura trenda uradno poruši, kar odpira pot prodajalcem.
 
 **Vloga zadnjega blažilca pri ${Math.round(fib1236)} USD:**
-Tik pod prejšnjim dnom se nahaja še zadnja tehnična meja, ki lahko vpliva na razvoj dogodkov. Ta nivo izračunamo po formuli: 
-
-$$fib1236 = waveStart - (waveEnd - waveStart) \cdot 0.236$$
-
-Ta točka služi kot zadnji varnostni blažilec. Včasih trg namerno prebije prejšnje dno, da "ulovi" likvidnost (t.i. stop-loss hunt), nato pa se prav pri tej vrednosti zaustavi in hitro obrne navzgor. Če se instrument na tej stopnji stabilizira, je možnost za formacijo dvojnega dna še vedno živa.
+Tik pod prejšnjim dnom se nahaja še zadnja tehnična meja, ki lahko vpliva na razvoj dogodkov. Ta nivo služi kot zadnji varnostni blažilec. Včasih trg namensko za kratek čas prebije prejšnje dno, da aktivira prodajna naročila, nato pa se prav pri tej vrednosti zaustavi in obrne. Če se instrument na tej stopnji stabilizira, je možnost za uspešno formacijo dvojnega dna še vedno živa.
 
 **Strategija opazovanja:**
-**Na tej točki odpore** (ki zdaj deluje kot zadnji branik podpore) ne smemo prehitevati dogodkov.
-*   **Potrditev odboja:** Iščite močne zavrnitve na 4-urnem grafu. Če se cena dotakne ${Math.round(waveStart)} USD in se takoj zatem izoblikuje svečnik z dolgo spodnjo senco, je to znak, da je vzorec dvojnega dna aktiven.
-*   **Nevarnost zloma:** Če se cena stabilizira pod ${Math.round(fib1236)} USD, se vzorec dvojnega dna razveljavi. V tem primeru se odpre prazen prostor za nadaljnje padanje proti spodnji tarči pri **${Math.round(target1)} USD**.
+**Na tej točki odpore** (ki zdaj deluje kot zadnji branik podpore) je ključno spremljati dejansko reakcijo trga:
+*   **Potrditev odboja:** Namesto ugibanja iščite jasen **odboj od tega nivoja** na 4-urnem grafu. Če se cena dotakne **${Math.round(waveStart)} USD** in se takoj zatem izoblikuje odboj navzgor, je to prvi realni znak, da je vzorec dvojnega dna aktiven in da so kupci prevzeli nadzor.
+*   **Nevarnost zloma:** Če cena ne pokaže odboja in se stabilizira pod ${Math.round(fib1236)} USD, se vzorec dvojnega dna razveljavi. V tem primeru se odpre prostor za nadaljnje padanje proti spodnji tarči pri **${Math.round(target1)} USD**.
 
 **Zaključek:** 
 Nahajamo se v območju maksimalne napetosti. Ali bo nivo pri **${Math.round(waveStart)} USD** služil kot odskočna deska za nov vzpon, ali pa bomo priča kapitulaciji kupcev? Bodite pozorni na vsako reakcijo, saj se prav zdaj postavlja temelj za naslednje večje gibanje instrumenta **${pairInput}**.
