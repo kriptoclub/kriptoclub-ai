@@ -356,7 +356,7 @@ Preboj vrha je pomemben korak, vendar drama še ni končana. Ključno bo spremlj
 
     analysis = `
 **GLAVNI NIVOJI IN STATUS:**
-*   **Status:** 📊 Približevanje primarni dolgoročni tarči (1.618)
+*   **Status:** 📊 Približevanje primarni dolgoročni tarči 
 *   **Dolgoročna tarča:** ${Math.round(target1)} USD
 *   **Taktični fokus:** Spremljanje krajših časovnih intervalov
 
