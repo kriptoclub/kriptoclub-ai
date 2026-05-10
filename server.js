@@ -483,6 +483,13 @@ Nahajamo se na nivoju, kjer se v večini primerov zgodba trenutnega impulza zakl
 } else if (currentPrice < target5) {
 
     analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 🚀 Izjemno razširjen trend (Vstop v območje ekstrema)
+*   **Naslednja dolgoročna tarča:** ${Math.round(target5)} USD
+*   **Glavna podpora (Prejšnja tarča):** ${Math.round(target4)} USD
+*   **Taktični fokus:** Spremljanje strukturnih obratov na 1h in 4h intervalih
+
+---
 ### 🚀 Izjemno razširjen trend in vstop v območje ekstrema
 
 Trg se trenutno nahaja v območju izjemno močnega in razširjenega trenda, kar v tehnični analizi predstavlja redek in statistično nadpovprečen scenarij. Cena vztrajno napreduje proti naslednji dolgoročni tarči pri **${Math.round(target5)} USD**, kar potrjuje prevladujočo moč kupcev.
@@ -501,6 +508,14 @@ Na krajših intervalih bodite pozorni na morebitno **formacijo nižjega dna**. T
 } else if (currentPrice < target6) {
 
     analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 🚀 Ekstremna impulzivna faza (Preseganje norm)
+*   **Naslednja dolgoročna tarča:** ${Math.round(target6)} USD
+*   **Glavna podpora (Prejšnja tarča):** ${Math.round(target5)} USD
+*   **Taktični fokus:** Zavarovanje dobičkov na 1h in 4h intervalih
+
+---
+
 ### 🚀 Ekstremna impulzivna faza in preseganje norm
 
 Trenutni val se nahaja v fazi izrazite moči, kjer tržna dinamika začne presegati običajne statistične vzorce gibanja. Ta par kaže izjemno močan momentum, naslednja potencialna dolgoročna tarča, ki jo trg zasleduje, pa se nahaja pri **${Math.round(target6)} USD**.
@@ -519,6 +534,14 @@ Na krajših intervalih bodite izjemno pozorni na morebitno **formacijo nižjega 
 } else if (currentPrice < target7) {
 
     analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** ⚡ Nadpovprečen pospešek (Parabolično gibanje)
+*   **Naslednja dolgoročna tarča:** ${Math.round(target7)} USD
+*   **Glavna podpora (Prejšnja tarča):** ${Math.round(target6)} USD
+*   **Taktični fokus:** Povečana pozornost na nenadne obrate (Flash-crash)
+
+---
+
 ### ⚡ Nadpovprečen pospešek in izjemna moč trenda
 
 Trenutno smo priča redkemu primeru izjemno močnega trenda, ki ga spremlja visok vertikalni pospešek. Cena se vztrajno približuje naslednji dolgoročni tarči pri **${Math.round(target7)} USD**. Čeprav graf deluje neustavljivo, takšna dinamika zahteva najvišjo stopnjo previdnosti.
@@ -536,6 +559,14 @@ Svetujemo povečano pozornost na nižjih časovnih intervalih (npr. 15min ali 1h
 } else if (currentPrice < target8) {
 
     analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 🏛️ Ekstremna tržna razširitev (Visoko tveganje)
+*   **Naslednja dolgoročna tarča:** ${Math.round(target8)} USD
+*   **Glavna podpora (Prejšnja tarča):** ${Math.round(target7)} USD
+*   **Taktični fokus:** Aktivno in agresivno upravljanje pozicij
+
+---
+
 ### 🏛️ Doseganje ekstremnih nivojev in tržna razširitev
 
 Takšna rast, ki jo trenutno spremljamo, spada v kategorijo izjemno redkih tržnih scenarijev. Ko trg doseže te stopnje, se moč trenda pogosto prevesi v fazo, kjer prevladujejo čustva in momentum, ne več zgolj osnovna tehnična pravila. Naslednja dolgoročna tarča se nahaja pri **${Math.round(target8)} USD**.
@@ -558,6 +589,14 @@ Na krajših intervalih bodite izjemno pozorni na morebitno **formacijo nižjega 
 } else if (currentPrice < target9) {
 
   analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 🌌 Končna ekstremna tarča (Vrhunec celotnega vala)
+*   **Zadnja tarča:** ${Math.round(target9)} USD
+*   **Glavna podpora (Prejšnja tarča):** ${Math.round(target8)} USD
+*   **Taktični fokus:** Iskanje končnega obrata (Blow-off top)
+
+---
+
 ### 🌌 Ekstremno redek tržni scenarij in končna tarča
 
 Cena je dosegla območje, ki ga večina instrumentov doseže le izjemoma. Nahajamo se v fazi, kjer se statistično najpogosteje zgodi vrh ali prehod v obdobje visoke nestabilnosti. Naslednja in hkrati zadnja dolgoročna tarča v tej seriji je **${Math.round(target9)} USD**.
