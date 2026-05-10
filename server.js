@@ -414,38 +414,38 @@ Najpomembnejša podpora se je zdaj uradno premaknila na nivo **${Math.round(targ
 Uživajte v moči trenda, a ohranite profesionalno distanco. Naslednja dolgoročna tarča pri **${Math.round(target2)} USD** je cilj, vendar je pot do tja zdaj bolj odvisna od psihologije množic kot od same tehnike.
 `;
 
-  } else if (currentPrice < target3) {
+} else if (currentPrice < target3) {
 
     analysis = `
 **GLAVNI NIVOJI IN STATUS:**
-*   **Status:** 🔥 Ekstremna impulzna faza (Iracionalna rast)
+*   **Status:** 🔥 Ekstremna impulzna faza (Faza visoke volatilnosti)
 *   **Naslednja dolgoročna tarča:** ${Math.round(target3)} USD
 *   **Glavna podpora (Prejšnja tarča):** ${Math.round(target2)} USD
-*   **Taktični fokus:** Maksimalna previdnost na 1h in 4h intervalih
+*   **Taktični fokus:** Spremljanje strukturnih obratov na 1h in 4h intervalih
 
 ---
 
-### 🔥 Izrazita moč trenda: Vstop v "nevarno cono" Tarče 3
+### 🔥 Izrazita moč trenda: Približevanje območju Tarče 3
 
-Instrument **${pairInput}** trenutno prehaja v fazo izrazite impulzivnosti, ki jo poganja skoraj neustavljiva tržna vročica. Če smo prej govorili o elitnih 20 %, so primeri, ko trg doseže in napade nivo pri **${Math.round(target3)} USD**, še bistveno redkejši. Smo v območju, kjer tržna struktura postane nadpovprečno strma, tveganje pa doseže vrelišče.
+Instrument **${pairInput}** trenutno prehaja v fazo izrazite impulzivnosti, ki jo poganja močan tržni zagon. Doseganje in testiranje nivoja pri **${Math.round(target3)} USD** predstavlja statistično redek dogodek, kjer tržna struktura postane nadpovprečno strma, s tem pa se znatno poveča tudi tveganje za nenadne popravke.
 
-**Psihološki zlom in vrhunec FOMO pojava:**
-V tej fazi se na trgu zgodi popolna prevlada iracionalnosti. To je trenutek, ko se o rasti **${pairInput}** začne govoriti v širših krogih in ko v trg vstopajo ljudje, ki nimajo nobene strategije, razen strahu, da bodo zamudili zadnji vlak. 
+**Psihološki vidik in vrhunec FOMO pojava:**
+V tej fazi se na trgu pogosto pojavi prevlada čustvenih odločitev nad racionalnimi. To je trenutek, ko tržni sentiment doseže ekstreme in v gibanje vstopajo udeleženci, ki jih vodi izključno strah pred zamujeno priložnostjo (**FOMO**). 
 
-Ta zadnji val kupcev, ki jih vodi čisti **FOMO**, ustvari t.i. "vertikalni pospešek". Vendar pa zgodovina trgovanja uči, da so prav ti vstopi najbolj nevarni – evforija je na vrhuncu, hkrati pa je trg najbolj ranljiv za nenadno in brutalno spremembo smeri. Na tej stopnji se več ne trguje na podlagi tega, koliko je instrument vreden, temveč na podlagi tega, koliko je še preostalih kupcev, ki so pripravljeni kupiti po še višji ceni.
+Takšen pritisk ustvari "vertikalni pospešek", vendar so vstopi na teh nivojih tehnično zelo izpostavljeni. Evforija je na tej stopnji visoka, trg pa postane ranljiv za hitre spremembe smeri, saj se likvidnost pri teh ekstremnih vrednostih lahko hitro spremeni. Več se ne trguje na podlagi realnih vrednotenj, temveč na podlagi trenutnega zagona, ki ga narekujejo zadnji kupci v trendu.
 
 **⚠️ Operativno opozorilo in Risk Management:**
-Vstopanje v nove pozicije na teh nivojih meji na hazardiranje. Za tiste, ki so v poziciji že od nižjih nivojev, pa je zdaj čas za kirurško natančnost pri spremljanju strukture.
-*   **Spremljanje intervalov:** Pozabite na dnevne grafe; vaša pozornost mora biti usmerjena izključno na **1h in 4h intervale**. 
-*   **Signal za konec zabave:** **Na tej točki odpore**, ko se približujemo nivoju ${Math.round(target3)} USD, je vsaka formacija **prvega nižjega dna** rdeči alarm. To bo prvi in najmočnejši signal, da se je likvidnost kupcev izčrpala in da prodajalci prevzemajo kontrolo nad gibanjem. Ko se trend na teh stopnjah obrne, so padci pogosto hitri, agresivni in brez povratka na prejšnje vrhove.
+Za tiste, ki so že v poziciji, je zdaj ključno, da svojo pozornost usmerijo na natančno spremljanje tržne strukture.
+*   **Spremljanje intervalov:** Dnevni grafi postanejo premalo odzivni, zato svetujemo uporabo **1h in 4h intervalov**. 
+*   **Signal za izčrpanost trenda:** **Na tej točki odpore**, ko se približujemo ${Math.round(target3)} USD, je formacija **prvega nižjega dna** na krajših intervalih ključen opozorilni znak. To je prvi realni signal, da se je moč kupcev izčrpala in da prodajalci začenjajo prevzemati kontrolo nad gibanjem. Popravki so v takšnih fazah običajno hitri in agresivni.
 
 **Tehnična podpora:**
-Glavna in edina relevantna podpora se zdaj nahaja pri **${Math.round(target2)} USD**. To je vaša zadnja linija zavetja. Dokler se cena zadržuje nad to mejo, lahko sanje o Tarči 3 živijo, vendar padec pod ta nivo pomeni takojšnjo razveljavitev trenutne evforije in prehod v fazo močne razprodaje.
+Glavna podpora se zdaj nahaja pri **${Math.round(target2)} USD**. To območje služi kot ključni filter; dokler se cena zadržuje nad njim, trend ohranja svoj impulz. Padec pod ta nivo pa bi pomenil konec trenutne faze rasti in prehod v globljo korekcijo.
 
 **Zaključek:** 
-Nahajamo se v fazi, kjer se ustvarjajo in hkrati uničujejo premoženja. Naslednja dolgoročna tarča pri **${Math.round(target3)} USD** je na vidiku, vendar zahteva jeklene živce in prst na gumbu za izstop. Ne dovolite, da vas evforija oslepi pred realnostjo grafa.
+Nahajamo se v območju, kjer sta nujna maksimalna previdnost in dosledno spoštovanje trgovalne strategije. Naslednja dolgoročna tarča pri **${Math.round(target3)} USD** je na vidiku, vendar zahteva trezno glavo in hitro odzivnost na morebitne spremembe v strukturi cene.
 `;
-
+    
   } else if (currentPrice < target4) {
 
     analysis = `
