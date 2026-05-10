@@ -322,16 +322,31 @@ Nahajamo se v območju, kjer se pišejo zgodbe o velikih izgubah in redkih prilo
 
   } else if (currentPrice > target4) {
 
-  analysis = `
-Cena se nahaja v območju, ki v večini primerov predstavlja končno fazo trenutnega padajočega vala.
+    analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 🛑 Končna faza kapitulacije (Območje izčrpanosti)
+*   **Končna tarča vala:** ${Math.round(target4)} USD
+*   **Taktični fokus:** Iskanje znakov obrata (Wick-i in višja dna)
+*   **Kritični intervali:** 5min in 15min za kirurški vstop
 
-Nivo pri ${Math.round(target4)} USD pogosto deluje kot območje izčrpanosti trenda, kjer se prodajni pritisk postopoma zmanjšuje in trg začne iskati ravnotežje.
+---
 
-V večini primerov se na tem območju oblikuje dno vala ali vsaj pomembnejši kratkoročni obrat.
+### 🛑 Doseganje terminalne faze: Tarča 4 pri ${Math.round(target4)} USD
 
-Če pa pride do nadaljnjega padca tudi pod ta nivo, gre za redek in izrazito impulziven scenarij. V tem primeru priporočam, da poskusiš identificirati nov, manjši val na nižjih časovnih intervalih.
+Instrument **${pairInput}** se nahaja v območju, ki v večini statističnih modelov predstavlja končno fazo trenutnega padajočega vala. Nivo pri **${Math.round(target4)} USD** pogosto deluje kot absolutna točka izčrpanosti trenda. Tukaj se prodajni pritisk, ki je poganjal prejšnjo katastrofo, postopoma unese, saj trg doseže nivoje, ki so za kupce dolgoročno preveč privlačni.
 
-Vsak večji val je namreč sestavljen iz podvalov, zato lahko z analizo teh manjših struktur natančneje določiva naslednje potencialne tarče in območje končnega dna.
+**Iskanje dna: Bodite pozorni na znake preobrata**
+Čeprav je to običajno končna točka, v trgovanju previdnost nikoli ni odveč. Na tej stopnji se dno ne zgodi v ravni črti, temveč skozi proces "pobiranja likvidnosti". **Na tej točki odpore** (ki zdaj služi kot zadnja podpora) bodite pozorni na naslednje signale na krajših intervalih (**5min ali 15min**):
+
+*   **Veliki "Wick-i" (dolge spodnje sence):** Če opazite, da cena močno prebije nivo, a se v isti ali naslednji minuti hitro vrne nadenj, so to t. i. veliki wick-i. To je jasen znak, da so institucionalni kupci "posesali" vsa prodajna naročila.
+*   **Prvo višje dno (First Higher Low):** To je sveti gral potrditve obrata. Ko cena enkrat doseže dno, se odbije in pri naslednjem padcu ne doseže novega najnižjega nivoja, temveč ustvari višje dno – to je vaš signal, da so biki ponovno prevzeli vajeti.
+*   **Volumenski vrhunec:** Ekstremen skok volumna ob hkratnem umirjanju padanja cene je pogosto zadnji izdihljaj prodajalcev pred obratom.
+
+**Scenarij ekstremnega podaljška:**
+Če bi prišlo do nadaljnjega padca tudi pod ta nivo, bi vstopili v izjemno redek in impulziven scenarij, ki presega standardne okvire. V tem primeru bo treba identificirati nov, manjši val na nižjih časovnih intervalih. Vsak velik val je namreč sestavljen iz podvalov – z analizo teh manjših struktur bova lahko natančno določila, kje se skriva tisto zadnje, končno dno.
+
+**Zaključek:** 
+Nahajamo se na nivoju, kjer se v večini primerov zgodba padanja zaključi. Svetujemo maksimalno zbranost in spremljanje vsakega premika na nižjih intervalih. Če boste opazili močne odboje in strukturno stabilizacijo, mi sporočite – morda smo pravkar dosegli dno, od koder se bo začel nov rastoči cikel instrumenta **${pairInput}**.
 `;
   
 }
