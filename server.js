@@ -163,35 +163,34 @@ Nahajamo se na najpomembnejši postaji celotnega gibanja. Uspešen in odločen o
 
     analysis = `
 **GLAVNI NIVOJI IN STATUS:**
-*   **Status:** ⚠️ Kritična faza (Zadnja obrambna linija)
-*   **Zadnja odrešilna bilka:** ${Math.round(fib0786)} USD
+*   **Status:** ⚠️ Kritična faza (Zadnja linija obrambe)
+*   **Ključni nivo za preobrat:** ${Math.round(fib0786)} USD
 *   **Možnost formacije dvojnega dna:** ${Math.round(waveStart)} USD
-*   **Naslednja nevarna tarča:** ${Math.round(target1)} USD
+*   **Potencialna spodnja tarča:** ${Math.round(target1)} USD (v primeru padca pod prejšnje dno)
 
 ---
 
-### ⚠️ Zadnja obramba: Bitka za obstanek rastočega trenda
+### 🛡️ Zadnja linija obrambe: Bitka za nivo ${Math.round(fib0786)} USD
 
-Pri instrumentu **${pairInput}** so se razmere močno zaostrile. Dejstvo, da cena ni zdržala nad ključnim nivojem pri **${Math.round(fib0618)} USD**, je močan opozorilni signal. Izguba tiste "zlate meje" pomeni, da popravek ni bil več le konstruktiven premik, temveč se je sprevrgel v globoko slabitev momentuma. Zdaj smo dosegli nivo pri **${Math.round(fib0786)} USD**, ki velja za zadnjo točko, kjer biki še lahko upajo na preobrat.
+Razmere na trgu za instrument **${pairInput}** so se opazno zaostrile. Dejstvo, da cena ni zdržala nad ključnim območjem pri **${Math.round(fib0618)} USD**, je močan tehnični signal, da popravek prehaja v globljo slabitev momentuma. Ta nivo pri **${Math.round(fib0786)} USD** predstavlja zadnjo točko, kjer biki še lahko upajo na strukturni preobrat in ohranitev rastočega scenarija.
 
-**Zakaj je izguba prejšnjega nivoja (${Math.round(fib0618)} USD) tako usodna?**
-V tehnični analizi velja, da dokler se cena drži nad to mejo, kupci nadzorujejo situacijo. Padec pod to ceno je psihološko razbil prepričanje o hitrem nadaljevanju rasti. Zdaj trg ne išče več potrditve moči, temveč krčevito išče dno, da bi preprečil popoln zlom strukture.
+**Pomen izgube prejšnje podpore:**
+V tehnični analizi velja pravilo, da dokler se cena drži nad nivojem 0.618, kupci ohranjajo relativno kontrolo nad trendom. Padec pod to mejo pa psihološko zamaje prepričanje o hitrem nadaljevanju rasti. Trenutno trg krčevito išče dno, da bi preprečil popoln zlom strukture, ki je bila zgrajena v prejšnjem valu.
 
-**Strategija "zadnje bilke" pri ${Math.round(fib0786)} USD:**
-Nivo pri **${Math.round(fib0786)} USD** je tista točka, kjer se pogosto nahajajo zadnja velika institucionalna naročila. 
-*   **Odločilna reakcija:** **Na tej točki odpore** (oziroma trenutne podpore) potrebujemo takojšnjo in agresivno reakcijo kupcev. Če se cena tukaj ne ustavi, postane verjetnost, da se bo rastoči trend sploh kdaj nadaljeval v prvotni obliki, izjemno majhna.
-*   **Možnost dvojnega dna:** Če cena zdrsne še nekoliko nižje, proti izhodišču vala pri **${Math.round(waveStart)} USD**, bomo pozorni na formacijo t.i. "dvojnega dna". To bi bila zadnja priložnost za stabilizacijo, preden instrument zapluje v nevarne vode medvedjega trenda.
+**Strategija na nivoju ${Math.round(fib0786)} USD:**
+Nivo pri **${Math.round(fib0786)} USD** velja za zadnjo resno priložnost za stabilizacijo cene. 
+*   **Reakcija kupcev:** **Na tej točki odpore** (ki trenutno deluje kot ključna podpora) je nujna takojšnja aktivacija kupcev. Če cena tukaj ne najde opore, se verjetnost za ohranitev rastočega trenda v prvotni obliki znatno zmanjša.
+*   **Možnost dvojnega dna:** V kolikor cena zdrsne še nekoliko nižje, proti izhodišču vala pri **${Math.round(waveStart)} USD**, postane glavni fokus formacija "dvojnega dna". To bi bila zadnja priložnost za vzpostavitev ravnovesja, preden instrument morebiti preide v dolgotrajnejši medvedji trend.
 
-**Kaj sledi v primeru neuspeha?**
-Če nivo pri **${Math.round(fib0786)} USD** dokončno popusti in se dnevni svečnik zapre pod to mejo, se tveganje za prosti pad močno poveča. V tem primeru se verjetnost prevesi v smeri nadaljnjega padanja proti primarni spodnji tarči pri **${Math.round(target1)} USD**.
+**Kaj pričakovati v primeru neuspeha?**
+Če nivo pri **${Math.round(fib0786)} USD** dokončno popusti in se dnevni svečnik zapre pod to mejo, se odpre prostor proti spodnjim nivojem. V primeru padca pod prejšnje dno postane povsem realna naslednja potencialna spodnja tarča pri **${Math.round(target1)} USD**.
 
 **Navodilo za spremljanje:**
-Bodite izjemno previdni. Zdaj ni čas za agresivne nakupe brez jasnih dokazov o odboju.
-*   **Spremljajte 4-urni graf:** Iščite močne zavrnitve (dolge spodnje sence svečnikov) prav na nivoju **${Math.round(fib0786)} USD**.
-*   **Invalidacija:** Vsako stabiliziranje pod to ceno pomeni, da so biki kapitulirali.
+*   **Spremljajte 4-urni graf:** Bodite pozorni na močne zavrnitve (dolge spodnje sence svečnikov) prav pri ceni **${Math.round(fib0786)} USD**.
+*   **Potrditev odboja:** Prvi znak stabilizacije bi bil močan zeleni svečnik, ki bi nakazal na absorpcijo prodajnega pritiska na tej ključni ravni.
 
 **Zaključek:** 
-Nahajamo se na robu. Nivo pri **${Math.round(fib0786)} USD** je zadnja tehnična bariera, ki loči trenutni popravek od popolnega strukturnega zloma. Spremljajte vsak premik, saj se prav zdaj odloča o dolgoročni smeri instrumenta **${pairInput}**.
+Nahajamo se na prelomnici. Nivo pri **${Math.round(fib0786)} USD** je odločilna tehnična bariera, ki loči trenutni popravek od globljega strukturnega zloma. Vsak premik pri instrumentu **${pairInput}** na tem nivoju je zdaj ključnega pomena za prihodnjo smer gibanja.
 `;
 
 } else if (currentPrice > waveStart) {
