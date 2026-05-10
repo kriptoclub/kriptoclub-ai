@@ -449,15 +449,37 @@ Nahajamo se v območju, kjer sta nujna maksimalna previdnost in dosledno spošto
   } else if (currentPrice < target4) {
 
     analysis = `
-### 🛑 Doseganje območja izčrpanosti
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 🛑 Območje statistične izčrpanosti
+*   **Primarna zadnja tarča:** ${Math.round(target4)} USD
+*   **Naslednja morebitna ekstremna tarča:** Izračun po preboju
+*   **Glavna podpora (Prejšnja tarča):** ${Math.round(target3)} USD
 
-Cena se približuje statistično kritičnemu območju pri **${Math.round(target4)} USD**. Pri teh nivojih se večina gibanj začne umirjati, saj kupci postajajo izčrpani.
+---
 
-**Pričakovanja:** Možna je konsolidacija ali zavrnitev na tej točki odpore. Če bo ta nivo presežen, se odpre pot naprej, vendar je to manj verjeten scenarij. Če pride do preboja mi sporoči in bova ponovno ocenila situacijo.
+### 🛑 Doseganje območja izčrpanosti: Statistična prelomnica pri ${Math.round(target4)} USD
 
-**Priporočilo:** Povečana pozornost na nižjih intervalih zaradi možnega izčrpavanja trenda. Najbližja podpora je pri **${Math.round(target3)} USD**. Na krajših intervalih bodite pozorni na morebitno formacijo nižjega dna, saj bo to prvi signal da prodajalci prevzemajo kontrolo. 
+Instrument **${pairInput}** se hitro približuje nivoju, ki v tehnični analizi predstavlja kritično območje izčrpanosti. Podobno kot velja za prvo tarčo, kjer je zavrnjenih okoli 80 % gibanj, se podobna slika ponovi tukaj. Tarča 4 pri **${Math.round(target4)} USD** je nivo, ki ga le redki valutni pari uspešno presežejo v enem samem impulzu.
+
+**Analiza verjetnosti in strateški premislek:**
+Statistično gledano se na tej stopnji večina rastočih trendov umiri, saj kupci, ki so vstopili na nižjih nivojih, množično zapirajo svoje pozicije. **Na tej točki odpore** je zato povsem racionalno razmisliti o delnem ali popolnem vnovčevanju dobičkov. Gre za območje, kjer tveganje za nenaden in globok popravek močno presega potencial za takojšnjo nadaljnjo rast.
+
+**Kaj če se rast nadaljuje?**
+Čeprav so primeri, ko cena prebije Tarčo 4, redki, niso nemogoči. Če se to zgodi, vstopimo v zadnjo, najbolj evforično fazo trenda, ki presega vse običajne tehnične okvirje. 
+*   **Brez skrbi glede zamujenega:** Če bo nivo pri **${Math.round(target4)} USD** odločno presežen in se bo cena nad njim stabilizirala, bo še vedno dovolj časa za "ulov naslednjega vlaka". Takšen preboj bi namreč nakazal na ekstremno močan sentiment, ki bi odprl pot proti povsem novim, še višjim ciljem.
+
+**Operativno spremljanje in znaki za izstop:**
+Ker smo v območju visoke negotovosti, je pasivno spremljanje nevarno. Vaša pozornost mora biti usmerjena na strukturne spremembe:
+*   **Ključni intervali:** Osredotočite se na **1h in 4h intervale**. Vsak znak šibkosti pri teh cenah je treba jemati resno.
+*   **Prvo nižje dno:** To je vaš najpomembnejši signal. Če na omenjenih intervalih opazite formacijo prvega nižjega dna, je to jasen znak, da so prodajalci prevzeli nadzor in da se je trend na tej točki odpore zlomil.
+
+**Tehnična podpora:**
+Najbližja pomembna podpora se nahaja pri **${Math.round(target3)} USD**. Padec pod ta nivo bi pomenil dokončno potrditev, da je bila Tarča 4 vrh trenutnega vala, in bi sprožil proces globlje korekcije.
+
+**Zaključek:**
+Nahajamo se na nivoju, kjer se v večini primerov zgodba trenutnega impulza zaključi. Svetujemo trezno presojo in zaščito ustvarjenih dobičkov. V kolikor pa nas trg preseneti z odločnim prebojem nad **${Math.round(target4)} USD**, mi sporoči – v tem primeru bova ponovno ocenila situacijo in določila parametre za zadnjo fazo evforije.
 `;
-
+    
 } else if (currentPrice < target5) {
 
     analysis = `
