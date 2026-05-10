@@ -258,14 +258,32 @@ Nahajamo se na točki, kjer se določa globina trenutnega padca. Ali bo nivo pri
   
 } else if (currentPrice > target2) {
 
-  analysis = `
-Padanje se nadaljuje z naraščajočo dinamiko, kar potrjuje, da trg ostaja pod močnim vplivom prodajalcev.
+    analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 📉 Močan padajoči trend (Faza stopnjevanja pritiska)
+*   **Trenutna tarča:** ${Math.round(target2)} USD
+*   **Naslednje območje padca:** ${Math.round(target3)} USD
+*   **Kritična odporna meja:** ${Math.round(target1)} USD
 
-Cena se približuje naslednji pomembni tarči pri ${Math.round(target2)} USD. To območje lahko kratkoročno deluje kot točka umiritve ali začasnega odboja, vendar struktura trenutno še vedno podpira nadaljevanje padanja.
+---
 
-V primeru preboja tega nivoja se odpre prostor za nadaljevanje proti ${Math.round(target3)} USD.
+### 📉 Naraščajoča dinamika padanja: Iskanje končnega dna
 
-Ključno je spremljati odziv cene na posameznih nivojih ter strukturo na nižjih časovnih intervalih, kjer se pogosto najprej pokažejo znaki morebitnega obrata.
+Padanje instrumenta **${pairInput}** se nadaljuje z vse večjo agresivnostjo, kar potrjuje, da trg ostaja pod močnim vplivom prodajalcev. Ko so ključni nivoji podpore enkrat prebiti, se tehnična slika izprazni, kar prodajalcem omogoča, da s sorazmerno majhnim volumnom potiskajo ceno vse nižje. Trenutno se približujemo naslednji pomembni tarči pri **${Math.round(target2)} USD**.
+
+**Kje se bo trend obrnil?**
+To je v tem trenutku edino vprašanje, ki ostaja odprto. Na tej stopnji se ne trguje več na podlagi optimizma, temveč na podlagi momentumu. Identifikacija dna v takšni fazi je zahtevna, saj se vsak poskus odboja pogosto izkaže le za začasno umiritev pred novim valom razprodaj. Nivo pri **${Math.round(target2)} USD** lahko kratkoročno deluje kot točka psihološke zaustavitve, vendar struktura trenutno še ne kaže jasnih znakov izčrpanosti prodajalcev.
+
+**Scenarij nadaljnjega zloma:**
+Če instrument ne uspe vzpostaviti močnega odboja na tem nivoju, se odpre prostor za neovirano nadaljevanje proti **${Math.round(target3)} USD**. V takšnih razmerah se lahko zgodi t. i. "prosti pad", kjer se likvidnost na strani kupcev popolnoma umakne, dokler cena ne doseže nivojev, ki so dolgoročno preveč privlačni, da bi jih institucionalni vlagatelji ignorirali.
+
+**Navodilo za spremljanje in identifikacijo obrata:**
+**Na tej točki odpore** (oziroma trenutne podpore) je nujno spremljati strukturo na krajših časovnih intervalih, kot sta **1h in 4h**:
+*   **Prvi znak obrata:** Ne iščite zgolj dotika cene. Prvi realni signal, da se trend morda obrača, bo formacija **prvega višjega dna** (higher low) na krajših intervalih. Dokler tega signala ni, vsak odboj razumemo le kot priložnost za prodajalce, da vstopijo po višjih cenah.
+*   **Volumen:** Spremljajte povečan volumen pri doseganju **${Math.round(target2)} USD**. Nenaden skok volumna ob zaustavitvi cene bi lahko nakazoval na t. i. "climax" oziroma vrhunec prodajnega pritiska.
+
+**Zaključek:** 
+Nahajamo se v fazi, kjer prevladuje pesimizem. Čeprav se nivo pri **${Math.round(target2)} USD** zdi kot logična točka za zaustavitev, je vprašanje o končnem obratu še vedno odvisno od dejanske reakcije kupcev. Bodite potrpežljivi in ne poskušajte ujeti dna brez jasne strukturne potrditve.
 `;
 
 } else if (currentPrice > target3) {
