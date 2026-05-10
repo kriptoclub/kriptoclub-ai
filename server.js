@@ -300,7 +300,7 @@ Nahajamo se v fazi, kjer prevladuje pesimizem. Čeprav se nivo pri **${Math.roun
 
 ### 🔥 Faza popolnega zloma: Približevanje Tarči 3 (${Math.round(target3)} USD)
 
-Instrument **${pairInput}** trenutno prehaja skozi fazo izrazitega in neusmiljenega padanja, ki jo v svetu trgovanja vidimo le redko. Nahajamo se v stanju ekstremne kapitulacije. Velja neizprosno tržno pravilo: **kar gre hitro dol, gre običajno še hitreje**, saj se v tej fazi sprožijo množične likvidacije in prisilne prodaje, ki ceno potiskajo v skoraj vertikalen pad.
+Instrument **${pairInput}** trenutno prehaja skozi fazo izrazitega in neusmiljenega padanja, ki jo v svetu trgovanja vidimo le redko. Nahajamo se v stanju ekstremne kapitulacije. Velja neizprosno tržno pravilo: **kar gre hitro dol, gre običajno gre še hitreje gor**, saj se v tej fazi sprožijo množične likvidacije in prisilne prodaje, ki ceno potiskajo v skoraj vertikalen pad.
 
 **⚠️ Opozorilo: Lovljenje padajočega noža**
 > **Pomembno:** Iskanje dna pri ceni **${Math.round(target3)} USD** v tej fazi predstavlja t.i. "lovljenje padajočega noža". To je eden najnevarnejših podvigov v trgovanju, saj se momentum prodajalcev ne ustavi ob prvem dotiku nivoja. Tveganje je izjemno visoko, saj se lahko smer gibanja kadarkoli še dodatno zaostri, preden pride do kakršne koli stabilizacije.
@@ -314,7 +314,7 @@ Zaradi ekstremne hitrosti gibanja moramo spremeniti način opazovanja grafa.
 **Na tej točki odpore** (ki zdaj deluje kot zadnja bariera pred še globljim breznom) so odboji običajno kratkotrajni in služijo le kot "past za kupce". Če ta nivo ne zdrži, se tehnična slika popolnoma poruši, kar odpira pot proti naslednji tarči pri **${Math.round(target4)} USD**. V takšnem okolju so vsi klasični indikatorji prenasičeni, trg pa poganja izključno surova panika.
 
 **Navodilo za spremljanje:**
-Bodite izjemno pozorni na obnašanje cene v neposredni bližini **${Math.round(target3)} USD**. Prvi realni signal, da se katastrofa umirja, bo prehod iz vertikalnega padanja v bočno konsolidacijo na krajših intervalih. Dokler se to ne zgodi, trg ostaja v fazi proste padavine.
+Bodite izjemno pozorni na obnašanje cene v neposredni bližini **${Math.round(target3)} USD**. Prvi realni signal, da se katastrofa umirja, bo prehod iz vertikalnega padanja v bočno konsolidacijo na krajših intervalih. Dokler se to ne zgodi, trg ostaja v fazi prostega padaanja.
 
 **Zaključek:** 
 Nahajamo se v območju, kjer se pišejo zgodbe o velikih izgubah in redkih priložnostih. Doseganje **${Math.round(target3)} USD** zahteva maksimalno zbranost in hladno glavo. Ne dovolite, da vas čustva prisilijo v vstop predčasno – počakajte na potrditev strukture, preden sploh razmišljate o postavitvi prve nakupne pozicije.
