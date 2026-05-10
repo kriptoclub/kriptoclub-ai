@@ -129,14 +129,34 @@ Ohranite fokus na ključnih cenah. Trg nam ponuja priložnost za vstop po ugodne
 
 } else if (currentPrice > fib0618) {
 
-  analysis = `
-Trenutno smo v fazi popravka.
+    analysis = `
+**GLAVNI NIVOJI IN STATUS:**
+*   **Status:** 📉 Odločilni popravek (Območje zlatega reza)
+*   **Ključni nivo za odboj:** ${Math.round(fib0618)} USD
+*   **Potrditev nadaljevanja trenda:** Preboj nad ${Math.round(waveEnd)} USD
+*   **Kritična meja stabilnosti:** ${Math.round(fib0618)} USD (zaključek svečnika)
 
-Cena je že padla pod prvo pomembnejšo območje, kar odpira prostor za nadaljevanje gibanja proti ${Math.round(fib0618)} USD.
+---
 
-To območje predstavlja ključno mejo, kjer se odloča ali se trend nadaljuje ali začne slabiti.
+### ⚖️ Iskanje ravnovesja: Bitka za nivo ${Math.round(fib0618)} USD
 
-Scenarij se razveljavi ob padcu pod ${Math.round(fib0618)} USD.
+Instrument **${pairInput}** se trenutno nahaja v fazi poglobljenega popravka. Potem ko je cena prebila prvo območje podpore, se zdaj ves fokus preusmerja proti ceni **${Math.round(fib0618)} USD**. To območje v teoriji trgovanja velja za "zlati rez" – prostor, kjer se naravni zakoni matematike srečajo s psihologijo množic.
+
+**Zakaj je ta nivo tako pomemben?**
+Definicija zdravega rastočega trenda pravi, da mora biti popravek omejen. Nivo pri **${Math.round(fib0618)} USD** predstavlja zadnjo mejo t.i. "konstruktivnega popravka". 
+*   **Absolutni odboj:** Od tega nivoja potrebujemo silovit in jasen odboj. Če se cena tukaj ustavi in odrazi navzgor, obstajajo statistično izjemno visoke možnosti, da se bo predhodni rastoči trend ne le nadaljeval, temveč dosegel povsem nove vrhove.
+*   **Psihologija kupcev:** Tu se ločijo priložnostni trgovci od tistih, ki trend razumejo strateško. Večina algoritmov in institucionalnih kupcev ima na tej ceni nastavljene alarme, saj velja pravilo: če trend preživi test pri **${Math.round(fib0618)} USD**, je njegova struktura neuničljiva.
+
+**Taktična navodila za ukrepanje:**
+**Na tej točki odpore** (ki zdaj deluje kot ključna podpora) ne smemo hiteti. Namesto tega iščemo potrditev:
+1.  **Spremljajte 4-urni interval:** Če se cena dotakne **${Math.round(fib0618)} USD** in se na tej ravni izoblikuje močan zeleni 4-urni svečnik z dolgo spodnjo senco (wick), je to jasen signal, da so kupci stopili v bran in agresivno kupujejo "popust".
+2.  **Alarm na ${Math.round(fib0618)} USD:** To je nivo, kjer se ne trguje na podlagi ugibanja, temveč na podlagi reakcije. Čisti odboj od te točke bi bil prvi korak k ponovnemu napadu na nivo **${Math.round(waveEnd)} USD**.
+
+**Opozorilo (Invalidacija):**
+Moramo biti realni – če cena ne pokaže nobene reakcije in se dnevni svečnik zaključi pod **${Math.round(fib0618)} USD**, se narava gibanja spremeni. V tem primeru ne govorimo več o zdravem popravku, temveč o resnem slabljenju trenda, kar bi lahko vodilo v dolgotrajnejše obdobje padanja ali celo v strukturni preobrat.
+
+**Zaključek:** 
+Nahajamo se na najpomembnejši postaji celotnega gibanja. Uspešen in odločen odboj od **${Math.round(fib0618)} USD** bi bil dokončni dokaz, da biki še niso rekli zadnje besede in da je pot proti novim vrhovom še vedno na mizi.
 `;
 
 } else if (currentPrice > fib0786) {
